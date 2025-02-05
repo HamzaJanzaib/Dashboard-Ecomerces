@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/aside.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="logo">
+                <img src="images/logo-light.png" alt="">
+            </div>
+            <div class="menu">
+                <h3>General</h3>
+                <div class="menu-item">
+                    <span id="dashboard-icon" class="material-icons">dashboard</span>
+                    <span class="menu-item-text"><a href="index.html">Dashboard</a></span>
+                </div>
+                <div id="active" class="menu-item">
+                    <span class="material-icons">manage_accounts</span>
+                    <span class="menu-item-text"><a href="manage.html">Manage Products</a></span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">add_circle</span>
+                    <span class="menu-item-text"><a href="add-product.html">Add Products</a></span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">category</span>
+                    <span class="menu-item-text"><a href="categories.html">Categories</a></span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">person</span>
+                    <span class="menu-item-text"><a href="user-info.html">User Info</a></span>
+                </div>
+                <div class="menu-item">
+                    <span class="material-icons">settings</span>
+                    <span class="menu-item-text"><a href="settings.html">Settings</a></span>
+                </div>
+            </div>
+        </aside>
+        <section id="right">
+            <header>
+                <div class="left">
+                    <h1>Manage Products</h1>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <span class="search-icon material-icons">search</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <span class="material-icons">notifications</span>
+                    <div class="profile">
+                        <img src="images/user.png" alt="">
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="filter-container">
+                    
+                        <div class="view-options">
+                            <button class="list-view active"><span class="material-icons">menu</span></button>
+                        </div>
+                        <div class="search-filter">
+                            <span class="material-icons">search</span>
+                            <input type="text" placeholder="Search...">
+                        </div>
+                        <div class="filter-right">
+                            <div class="filter-group">
+                                <select>
+                                    <option>All Collection</option>
+                                    <option>Fruits</option>
+                                    <option>Vegetables</option>
+                                    <option>Dried Fruits</option>
+                                    <option>Foods</option>
+                                    <option>Cookies</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <select>
+                                    <option>$50 - $100</option>
+                                    <option>$100 - $200</option>
+                                    <option>$200 - $500</option>
+                                </select>
+                            </div>
+                        <select class="sort-by">
+                            <option>Sort by: Default</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                        <button class="filter-btn">
+                            <span class="material-icons">filter_list</span>
+                            Filter
+                        </button>
+                        <button class="add-product">
+                            <span class="material-icons">add</span>
+                            <a href="add-product.html">Add new product</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="products-list">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/manage.js"></script>
+</body>
+
+</html>

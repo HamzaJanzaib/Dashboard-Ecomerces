@@ -1,71 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <main>
         <aside>
             <div class="logo">
                 <img src="images/logo-light.png" alt="">
             </div>
-            <div class="menu">  
+            <div class="menu">
                 <h3>General</h3>
                 <div id="active" class="menu-item">
                     <span id="dashboard-icon" class="material-icons">dashboard</span>
                     <span class="menu-item-text">Dashboard</span>
                 </div>
                 <div class="menu-item">
-                    <span  class="material-icons">manage_accounts</span>
-                    <span class="menu-item-text">manage-products</span>
+                    <span class="material-icons">manage_accounts</span>
+                        <span class="menu-item-text"><a href="manage.html">Manage Products </a></span>
                 </div>
                 <div class="menu-item">
-                    <span  class="material-icons">add_circle</span>
-                    <span class="menu-item-text"    >Add-Products</span>
+                    <span class="material-icons">add_circle</span>
+                    <span class="menu-item-text"><a href="add-product.html">Add Products</a></span>
                 </div>
                 <div class="menu-item">
-                    <span  class="material-icons">category</span>
-                    <span class="menu-item-text"    >Categories</span>
+                    <span class="material-icons">category</span>
+
+                    <span class="menu-item-text"> <a href="categories.html">Categories</a></span>
                 </div>
                 <div class="menu-item">
-                    <span  class="material-icons">person</span>
-                    <span class="menu-item-text">user-info</span>
+                    <span class="material-icons">person</span>
+
+                    <span class="menu-item-text"> <a href="user-info.html">User Info</a></span>
                 </div>
                 <div class="menu-item">
                     <span class="material-icons">settings</span>
-                    <span class="menu-item-text">Profile</span>
+                    <span class="menu-item-text"> <a href="settings.html">Settings</a></span>
                 </div>
             </div>
+
         </aside>
         <section id="right">
             <header>
                 <div class="left">
-                    <h1>Welcome , <span>Admin</span></h1>
+                    <h1>Welcome, <span>Admin</span></h1>
                 </div>
                 <div class="right">
+                    <div class="search">
+                        <span class="search-icon material-icons">search</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
                     <span class="material-icons">notifications</span>
                     <div class="profile">
                         <img src="images/user.png" alt="">
-                        <div class="search">
-                            <span class="search-icon material-icons">search</span>
-                            <input type="text" placeholder="Search...">
-                        </div>
                     </div>
-                </div>  
+                </div>
             </header>
             <div class="content">
-                
-        
+                <div class="contant-top">
+                    <div class="contant-left">
+                        <div class="stat-box">
+                            <div class="icon" style="background: #ffe9e5;">
+                                <span class="material-icons" style="color: #ff6b6b;">shopping_cart</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Orders</h3>
+                                <div class="stat-number">13,647</div>
+                                <div class="stat-change">
+                                    <span class="increase">▲ 2.3%</span>
+                                    <span class="period">Last Week</span>
+                                    <a href="#" class="view-more">View More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon" style="background: #ffe9e5;">
+                                <span class="material-icons" style="color: #ff6b6b;">person_add</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>New Leads</h3>
+                                <div class="stat-number">9,526</div>
+                                <div class="stat-change">
+                                    <span class="increase">▲ 8.1%</span>
+                                    <span class="period">Last Month</span>
+                                    <a href="#" class="view-more">View More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon" style="background: #ffe9e5;">
+                                <span class="material-icons" style="color: #ff6b6b;">lock</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Deals</h3>
+                                <div class="stat-number">976</div>
+                                <div class="stat-change">
+                                    <span class="decrease">▼ 0.3%</span>
+                                    <span class="period">Last Month</span>
+                                    <a href="#" class="view-more">View More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon" style="background: #ffe9e5;">
+                                <span class="material-icons" style="color: #ff6b6b;">attach_money</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Booked Revenue</h3>
+                                <div class="stat-number">$123.6k</div>
+                                <div class="stat-change">
+                                    <span class="decrease">▼ 10.6%</span>
+                                    <span class="period">Last Month</span>
+                                    <a href="#" class="view-more">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contant-right">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                </div>
+                <div class="contant-bottom">
+                    <div class="conversion-box">
+                        <div class="box-header">
+                            <h3>Conversions</h3>
+                        </div>
+                        <div class="chart-container">
+                            <div class="donut-chart">
+                                <canvas id="conversionChart"></canvas>
+                            </div>
+                            <div class="chart-info">
+                                <div class="period-stats">
+                                    <div>
+                                        <span>This Week</span>
+                                        <h4>23.5k</h4>
+                                    </div>
+                                    <div>
+                                        <span>Last Week</span>
+                                        <h4>41.05k</h4>
+                                    </div>
+                                </div>
+                                <div class="customer-type">
+                                    <span>Returning Customer</span>
+                                    <h4>65.2%</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="view-details">View Details</button>
+                    </div>
+
+                    <div class="sessions-box">
+                        <div class="box-header">
+                            <h3>Sessions by Country</h3>
+                        </div>
+                        <div class="map-container">
+                            <div id="worldMap">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115800.59082769848!2d67.0793728!3d24.8479744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1709474433635!5m2!1sen!2s"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="map-stats">
+                                <div>
+                                    <span>This Week</span>
+                                    <h4>23.5k</h4>
+                                </div>
+                                <div>
+                                    <span>Last Week</span>
+                                    <h4>41.05k</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pages-box">
+                        <div class="box-header">
+                            <h3>Top Pages</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <table class="pages-table">
+                            <thead>
+                                <tr>
+                                    <th>Page Path</th>
+                                    <th>Page Views</th>
+                                    <th>Exit Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>larkon/ecommerce.html</td>
+                                    <td>465</td>
+                                    <td><span class="rate positive">4.4%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/dashboard.html</td>
+                                    <td>425</td>
+                                    <td><span class="rate negative">20.4%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/chat.html</td>
+                                    <td>254</td>
+                                    <td><span class="rate warning">12.25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/auth-login.html</td>
+                                    <td>3369</td>
+                                    <td><span class="rate positive">5.2%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/email.html</td>
+                                    <td>985</td>
+                                    <td><span class="rate negative">64.2%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/social.html</td>
+                                    <td>653</td>
+                                    <td><span class="rate positive">2.4%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>larkon/blog.html</td>
+                                    <td>478</td>
+                                    <td><span class="rate negative">1.4%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/script.js"></script>
 </body>
+
 </html>

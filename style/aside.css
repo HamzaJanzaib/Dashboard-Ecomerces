@@ -37,17 +37,25 @@ aside{
     margin-top: 10px;
     color: #617388; 
 }
-.menu-item:hover{
+.menu-item:hover {
     background-color: #394048;
     color: #ffffff;
 }
-
+.menu-item:hover a{
+    text-decoration: none;
+    color: #ffffff;
+}
 #dashboard-icon{
     color: #FF6C2F;
 }
 
+
 #active{
     background-color: #394048;
+    color: #ffffff;
+}
+#active a{
+    text-decoration: none;
     color: #ffffff;
 }
 
