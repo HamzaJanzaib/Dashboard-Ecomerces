@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Products</title>
+    <title>User Info</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
@@ -25,20 +25,20 @@
                         <span class="menu-item-text">Dashboard</span>
                     </a>
                 </div>
-                <div id="active" class="menu-item">
+
+                <div  class="menu-item">
                     <a href="manage.html">
                         <span class="material-icons">manage_accounts</span>
                         <span class="menu-item-text">Manage Products</span>
                     </a>
                 </div>
-                <div class="menu-item">
-
+                <div  class="menu-item">
                     <a href="add-product.html">
                         <span class="material-icons">add_circle</span>
                         <span class="menu-item-text">Add Products</span>
                     </a>
                 </div>
-                <div class="menu-item">
+                <div id="active" class="menu-item">
 
                     <a href="user-info.html">
                         <span class="material-icons">person</span>
@@ -58,10 +58,11 @@
         <section id="right">
             <header>
                 <div class="left">
-                    <h1>Manage Products</h1>
+                    <h1>User Info</h1>
                 </div>
                 <div class="right">
                     <div class="search">
+
                         <span class="search-icon material-icons">search</span>
                         <input type="text" placeholder="Search...">
                     </div>
@@ -72,56 +73,40 @@
                 </div>
             </header>
             <div class="content">
-                <div class="filter-container">
-                    
-                        <div class="view-options">
-                            <button class="list-view active"><span class="material-icons">menu</span></button>
-                        </div>
-                        <div class="search-filter">
-                            <span class="material-icons">search</span>
-                            <input type="text" placeholder="Search...">
-                        </div>
-                        <div class="filter-right">
-                            <div class="filter-group">
-                                <select>
-                                    <option>All Collection</option>
-                                    <option>Fruits</option>
-                                    <option>Vegetables</option>
-                                    <option>Dried Fruits</option>
-                                    <option>Foods</option>
-                                    <option>Cookies</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <select>
-                                    <option>$50 - $100</option>
-                                    <option>$100 - $200</option>
-                                    <option>$200 - $500</option>
-                                </select>
-                            </div>
-                        <select class="sort-by">
-                            <option>Sort by: Default</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select>
-                        <button class="filter-btn">
-                            <span class="material-icons">filter_list</span>
-                            Filter
-                        </button>
-                        <button class="add-product">
-                            <span class="material-icons">add</span>
-                            <a href="add-product.html">Add new product</a>
-                        </button>
+                <div class="order-list-container">
+                    <h2>All Order List</h2>
+                    <div class="order-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product ID</th>
+                                    <th>Added Date</th>
+                                    <th>Customer</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Payment Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#583488/80</td>
+                                    <td>Apr 23, 2024</td>
+                                    <td class="customer">Gail C. Anderson</td>
+                                    <td>Normal</td>
+                                    <td>$1,230.00</td>
+                                    <td><span class="status unpaid">Unpaid</span></td>
+                                </tr>   
+                                
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-
-                <div class="products-list">
-                    
                 </div>
             </div>
         </section>
     </main>
-    <script src="script/manage.js"></script>
+    <script src="script/script.js"></script>
 </body>
+
 
 </html>

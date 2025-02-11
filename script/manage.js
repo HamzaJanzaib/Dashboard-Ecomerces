@@ -121,3 +121,6 @@ function renderProducts() {
 }
 
 document.addEventListener('DOMContentLoaded', renderProducts);
+
+
+

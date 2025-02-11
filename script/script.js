@@ -1,57 +1,58 @@
-const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Sindh', 'Punjab', 'Balochistan', 'KPK', 'FATA', 'Other'],
-        datasets: [{
-            label: 'Our Sales',
-            data: [2, 12, 3, 9, 2, 3],
-            borderWidth: 1,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)', 
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)', 
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ]
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+function addProduct() {
+    // Get all input values
+    const productData = {
+        name: document.getElementById('product-name').value,
+        category: document.getElementById('product-categories').value,
+        sku: document.getElementById('product-sku').value,
+        weight: document.getElementById('product-weight').value,
+        description: document.getElementById('product-description').value,
+        status: document.getElementById('product-status').value,
+        stock: document.getElementById('product-stock').value,
+        rating: document.getElementById('product-rating').value,
+        price: document.getElementById('product-price').value,
+        specialPrice: document.getElementById('product-special-price').value,
+        image: document.getElementById('file-upload').files[0]?.name || ''
+    };
+
+    // Validate required fields
+    if (!productData.name || !productData.category || !productData.price) {
+        alert('Please fill in all required fields (Name, Category, Price)');
+        return;
     }
-});
 
-// Conversion Chart
-const conversionChart = new Chart(document.getElementById('conversionChart'), {
-    type: 'doughnut',
-    data: {
-        datasets: [{
-            data: [65.2, 34.8],
-            backgroundColor: ['#ff6b6b', '#282E33'],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        cutout: '75%',
-        plugins: {
-            legend: {
-                display: false
-            }
-        }
-    }
-});
+    // Get existing products from localStorage or initialize empty array
+    let products = JSON.parse(localStorage.getItem('products')) || [];
 
+    // Add new product with ID
+    productData.id = products.length + 1;
+    products.push(productData);
+
+    // Save back to localStorage
+    localStorage.setItem('products', JSON.stringify(products));
+
+    // Clear form
+    clearForm();
+
+    alert('Product added successfully!');
+    window.location.href = 'manage.html';
+}
+
+function clearForm() {
+    document.getElementById('product-name').value = '';
+    document.getElementById('product-categories').selectedIndex = 0;
+    document.getElementById('product-sku').value = '';
+    document.getElementById('product-weight').value = '';
+    document.getElementById('product-description').value = '';
+    document.getElementById('product-status').value = '';
+    document.getElementById('product-stock').value = '';
+    document.getElementById('product-rating').value = '';
+    document.getElementById('product-price').value = '';
+    document.getElementById('product-special-price').value = '';
+    document.getElementById('file-upload').value = '';
+}
+
+function cancelProduct() {
+    clearForm();
+    window.location.href = 'manage.html';
+}

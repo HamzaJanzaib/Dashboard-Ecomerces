@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/aside.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="logo">
+                <img src="images/logo-light.png" alt="">
+            </div>
+            <div class="menu">
+                <h3>General</h3>
+                <div class="menu-item">
+                    <a href="index.html">
+                        <span id="dashboard-icon" class="material-icons">dashboard</span>
+                        <span class="menu-item-text">Dashboard</span>
+                    </a>
+                </div>
+
+                <div  class="menu-item">
+                    <a href="manage.html">
+                        <span class="material-icons">manage_accounts</span>
+                        <span class="menu-item-text">Manage Products</span>
+                    </a>
+                </div>
+                <div id="active" class="menu-item">
+                    <a href="add-product.html">
+                        <span class="material-icons">add_circle</span>
+                        <span class="menu-item-text">Add Products</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+
+                    <a href="user-info.html">
+                        <span class="material-icons">person</span>
+                        <span class="menu-item-text">User Info</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+
+                    <a href="settings.html">
+                        <span class="material-icons">settings</span>
+                        <span class="menu-item-text">Settings</span>
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+        <section id="right">
+            <header>
+                <div class="left">
+                    <h1>Add Product</h1>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <span class="search-icon material-icons">search</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <span class="material-icons">notifications</span>
+                    <div class="profile">
+                        <img src="images/user.png" alt="">
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="add-product-container">
+                    <div class="product-photo-section">
+                        <h2>Add Product Photo</h2>
+                        <div class="upload-area">
+                            <div class="upload-box">
+                                <span class="material-icons upload-icon">cloud_upload</span>
+                                <h3><label for="file-upload">select image <span class="browse-text">click to browse</span></label></h3>
+                                <p> PNG, JPG files are allowed</p>
+                                <input type="file" id="file-upload" hidden>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-info-section">
+                        <h2>Product Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Product Name</label>
+                                <input type="text" id="product-name" placeholder="Product Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Product Categories</label>
+                                <select id="product-categories">
+                                    <option disabled selected>Choose a categories</option>
+                                    <option value="Fruits">Fruits</option>
+                                    <option value="Vegetables">Vegetables</option>
+                                    <option value="Dried Fruits">Dried Fruits</option>
+                                    <option value="Food">Food</option>
+                                    <option value="cockies">cockies</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>SKU</label>
+                                <input type="text" id="product-sku" placeholder="SKU">
+                            </div>
+                            <div class="form-group">
+                                <label>Weight</label>
+                                <input type="text" id="product-weight" placeholder="In gm & kg">
+                            </div>
+                        </div>
+
+                        <div class="form-group description-group">
+                            <label>Description</label>
+                            <textarea id="product-description" placeholder="Short description about the product"></textarea>
+                        </div>
+
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Status</label>
+                                <input type="text" id="product-status" placeholder="instock | outstock | New">
+                            </div>
+                            <div class="form-group">
+
+
+
+                                <label>Stock</label>
+                                <input type="number" id="product-stock" placeholder="Quantity">
+                            </div>
+                            <div class="form-group">
+                                <label>Rating</label>
+                                <input type="text" id="product-rating" placeholder="Enter product rating">
+                            </div>
+                        </div>
+                        <h2>Pricing Details</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="price-input">
+                                    <span class="currency">$</span>
+                                    <input type="number" id="product-price" placeholder="000">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>spical price</label>
+
+                                <div class="price-input">
+                                    <span class="currency">%</span>
+                                    <input type="number" id="product-special-price" placeholder="000">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-actions">
+                            <button onclick="addProduct()" class="create-btn">Add Product</button>
+                            <button onclick="cancelProduct()" class="cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+
+</html>
