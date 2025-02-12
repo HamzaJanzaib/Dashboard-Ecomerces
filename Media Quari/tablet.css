@@ -1,0 +1,57 @@
+    .menu-item {
+        gap: 2px;
+        
+    }
+    .dashboard-icon{
+        font-size: 12px;
+    }
+
+    .menu-item-text {
+        font-size: 12px;
+    }
+
+    .menu h3 {
+        text-align: center;
+    }
+
+    .contant-top {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contant-left {
+        width: 100%;
+    }
+
+    .contant-right {
+        width: 95%;
+        margin: 0 auto;
+        height: 50vh;
+    }
+
+    .contant-top h1 {
+        font-size: 20px;
+    }
+
+    .contant-bottom {
+        display: block;
+        height: 100vh;
+    }
+
+    .sessions-box {
+        margin: 30px auto;
+    }
+
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: inherit;
+    }
+
+    .add-product {
+        font-size: 12px;
+        gap: 2px;
+    }

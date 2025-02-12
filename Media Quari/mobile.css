@@ -1,0 +1,100 @@
+aside{
+width: 11vw;
+}
+.logo{
+    display: none;
+}
+.menu h3{
+    display: none;
+}
+
+.contant-top{
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contant-left{
+    width: 100%;
+    height: 100%;
+}
+
+.contant-right{
+    width: 95%;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+.contant-top h1{
+    font-size: 20px;
+}
+
+
+.contant-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conversion-box{
+    width: 100%;
+}
+.sessions-box{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.pages-box{
+    width: 100%;
+}
+
+.menu-item span {
+    text-align: center;
+}
+
+.menu-item-text{
+    display: none;
+}
+.filter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.filter-right{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.filter-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 10px;
+}
+.filter-group h3{
+    font-size: 10px;
+}
+.products-list{
+    overflow-y: auto;
+    height: 100%;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 10px;
+}
+.product-details h3{
+    font-size: 10px;
+}
+.form-grid{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+}
+.form-grid input{
+    width: 100%;
+}
+.form-grid input{
+    width: 100%;
+}

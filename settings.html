@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/aside.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style/settings.css">
+    
+    <!-- Media query for no-mobile devices -->
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
+    <!-- Media query for mobile devices -->
+    <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
+    
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
+    
+    <!-- Media query for desktop -->
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
+</head>
+
+<body>
+    <main>
+        <aside>
+            <div class="logo">
+                <img src="/images/logo-light.png" alt="">
+            </div>
+            <div class="menu">
+                <h3>General</h3>
+                <div class="menu-item">
+                    <a href="index.html">
+                        <span id="dashboard-icon" class="material-icons">dashboard</span>
+                        <span class="menu-item-text">Dashboard</span>
+                    </a>
+                </div>
+
+                <div  class="menu-item">
+                    <a href="manage.html">
+                        <span class="material-icons">manage_accounts</span>
+                        <span class="menu-item-text">Manage Products</span>
+                    </a>
+                </div>
+                <div  class="menu-item">
+                    <a href="add-product.html">
+                        <span class="material-icons">add_circle</span>
+                        <span class="menu-item-text">Add Products</span>
+                    </a>
+                </div>
+                <div  class="menu-item">
+
+                    <a href="user-info.html">
+                        <span class="material-icons">person</span>
+                        <span class="menu-item-text">User Info</span>
+                    </a>
+                </div>
+                <div id="active" class="menu-item">
+
+                    <a href="settings.html">
+                        <span class="material-icons">settings</span>
+                        <span class="menu-item-text">Settings</span>
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+        <section id="right">
+            <header>
+                <div class="left">
+                    <h1>Settings</h1>
+                </div>
+                <div class="right">
+                    <div class="search">
+
+                        <span class="search-icon material-icons">search</span>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <span class="material-icons">notifications</span>
+                    <div class="profile">
+                        <img src="images/user.png" alt="">
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="cover-image">
+                            <img src="../Ecomerces-website/images/cover-purple.jpg" alt="Profile Cover">
+                            <button class="edit-cover-btn">Edit Cover</button>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                    <img src="../Ecomerces-website/images/user.png" alt="Profile Picture">
+                            </div>
+                            <div class="profile-details">
+                                <h2 class="profile-name">Jane Daniel</h2>
+                                <p class="profile-role">Agent</p>
+                            </div>
+                            <button class="edit-profile-btn">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>Account Settings</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" value="Jane Daniel">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" value="jane.daniel@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" value="+1 234 567 890">
+                            </div>
+                            <div class="form-group">
+                                <label>Role</label>
+                                <input type="text" value="Agent" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Password Settings</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password">
+                            </div>
+                            <button class="save-password-btn">Update Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+
+</html>
