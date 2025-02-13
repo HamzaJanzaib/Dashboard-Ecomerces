@@ -95,18 +95,20 @@
     background: #fff;
     border-radius: 15px;
     padding: 30px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .settings-section {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .settings-section h3 {
-    color: #1a202c;
-    font-size: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e2e8f0;
+    color: #344767;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #edf2f7;
 }
 
 .settings-form {
@@ -120,54 +122,82 @@
 .form-group label {
     display: block;
     font-weight: 500;
-    color: #4a5568;
+    color: #344767;
     margin-bottom: 8px;
     font-size: 14px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border: 1px solid #d1d9e6;
     border-radius: 8px;
-    font-size: 15px;
-    color: #2d3748;
+    font-size: 14px;
+    color: #344767;
     background: #fff;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: #805ad5;
-    box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.1);
+    border-color: #ff5757;
+    box-shadow: 0 0 0 3px rgba(255, 87, 87, 0.1);
 }
 
 .form-group input:disabled {
     background: #f8f9fa;
-    color: #718096;
+    color: #67748e;
     cursor: not-allowed;
 }
 
 .form-group input::placeholder {
-    color: #a0aec0;
+    color: #67748e;
 }
 
 .save-password-btn {
-    background: #805ad5;
+    background: #ff5757;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 24px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .save-password-btn:hover {
-    background: #6b46c1;
-    transform: translateY(-2px);
+    background: #ff4242;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 87, 87, 0.2);
+}
+
+/* Logout Button Styles */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.logout-btn:hover {
+    background-color: #ff4242;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 87, 87, 0.2);
+}
+
+.logout-btn .material-icons {
+    font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -192,7 +222,9 @@
         padding: 10px 14px;
     }
     
-    .save-password-btn {
+    .save-password-btn,
+    .logout-btn {
         width: 100%;
+        justify-content: center;
     }
 }

@@ -215,3 +215,7 @@ aside {
 .social-login-button {
     width: 100%;
 }
+.products-list{
+    width: 100%;
+    height: 100vh;
+}

@@ -5,31 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Products</title>
+    <!-- Core stylesheets -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
+    <!-- Material icons font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Media query for no-mobile devices -->
-     <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
-     <!-- Media query for mobile devices -->
-     <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
-    
-     <!-- Media query for tablets -->
-     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css"> 
-     
-     <!-- Media query for large screens -->
-     <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
-
+    <!-- Responsive stylesheets -->
+    <!-- Mobile devices (max-width: 460px) -->
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
+    <!-- Tablets (461px - 768px) -->
+    <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
+    <!-- Small desktops (769px - 1024px) -->
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
+    <!-- Large desktops (1025px and up) -->
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
 </head>
 
 <body>
     <main>
+        <!-- Sidebar navigation -->
         <aside>
             <div class="logo">
-                <img src="/images/logo-light.png" alt="">
+                <img src="/images/logo-light.png" alt="Company Logo">
             </div>
             <div class="menu">
                 <h3>General</h3>
+                <!-- Navigation menu items -->
                 <div class="menu-item">
                     <a href="index.html">
                         <span id="dashboard-icon" class="material-icons">dashboard</span>
@@ -43,30 +45,29 @@
                     </a>
                 </div>
                 <div class="menu-item">
-
                     <a href="add-product.html">
                         <span class="material-icons">add_circle</span>
                         <span class="menu-item-text">Add Products</span>
                     </a>
                 </div>
                 <div class="menu-item">
-
                     <a href="user-info.html">
                         <span class="material-icons">person</span>
                         <span class="menu-item-text">User Info</span>
                     </a>
                 </div>
                 <div class="menu-item">
-
                     <a href="settings.html">
                         <span class="material-icons">settings</span>
                         <span class="menu-item-text">Settings</span>
                     </a>
                 </div>
             </div>
-
         </aside>
+
+        <!-- Main content section -->
         <section id="right">
+            <!-- Header with search and profile -->
             <header>
                 <div class="left">
                     <h1>Manage Products</h1>
@@ -78,43 +79,52 @@
                     </div>
                     <span class="material-icons">notifications</span>
                     <div class="profile">
-                        <img src="images/user.png" alt="">
+                        <img src="images/user.png" alt="User Profile">
                     </div>
                 </div>
             </header>
+
+            <!-- Main content area -->
             <div class="content">
+                <!-- Filter and search controls -->
                 <div class="filter-container">
-                    
-                        <div class="view-options">
-                            <button class="list-view active"><span class="material-icons">menu</span></button>
+                    <div class="view-options">
+                        <button class="list-view active"><span class="material-icons">menu</span></button>
+                    </div>
+                    <div class="search-filter">
+                        <span class="material-icons">search</span>
+                        <input id="search-filter" type="text" placeholder="Search products...">
+                    </div>
+                    <div class="filter-right">
+                        <!-- Category filter -->
+                        <div class="filter-group">
+                            <select id="category-filter">
+                                <option selected value="All Collection">All Collection</option>
+                                <option value="Fruit">Fruits</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Dried Fruits">Dried Fruits</option>
+                                <option value="Foods">Foods</option>
+                                <option value="Cookies">Cookies</option>
+                            </select>
                         </div>
-                        <div class="search-filter">
-                            <span class="material-icons">search</span>
-                            <input type="text" placeholder="Search...">
+                        <!-- Price range filter -->
+                        <div class="filter-group">
+                            <select id="price-filter">
+                                <option selected value="All Price">All Price</option>
+                                <option value="$10 - $30">$10 - $30</option>
+                                <option value="$30 - $60">$30 - $60</option>
+                                <option value="$60 - $100">$60 - $100</option>
+                            </select>
                         </div>
-                        <div class="filter-right">
-                            <div class="filter-group">
-                                <select>
-                                    <option>All Collection</option>
-                                    <option>Fruits</option>
-                                    <option>Vegetables</option>
-                                    <option>Dried Fruits</option>
-                                    <option>Foods</option>
-                                    <option>Cookies</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <select>
-                                    <option>$50 - $100</option>
-                                    <option>$100 - $200</option>
-                                    <option>$200 - $500</option>
-                                </select>
-                            </div>
-                        <select class="sort-by">
-                            <option>Sort by: Default</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select>
+                        <!-- Sort options -->
+                        <div class="filter-group">
+                            <select id="sort-by">
+                                <option selected value="Default">Sort by: Default</option>
+                                <option value="Name: A-Z">Name: A-Z</option>
+                                <option value="Name: Z-A">Name: Z-A</option>
+                            </select>
+                        </div>
+                        <!-- Action buttons -->
                         <button class="filter-btn">
                             <span class="material-icons">filter_list</span>
                             Filter
@@ -126,13 +136,32 @@
                     </div>
                 </div>
 
+                <!-- Products table -->
                 <div class="products-list">
-                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input id="select-all" type="checkbox">
+                                </th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Category</th>
+                                <th>Rating</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Product rows will be dynamically added here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
     </main>
-    <script src="script/script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
