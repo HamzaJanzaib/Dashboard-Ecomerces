@@ -98,3 +98,25 @@ width: 11vw;
 .form-grid input{
     width: 100%;
 }
+
+/* Styles for mobile devices (461px - 768px) */
+.login-container {
+    width: 85%;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.social-login-buttons {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-login-button {
+    width: 100%;
+}

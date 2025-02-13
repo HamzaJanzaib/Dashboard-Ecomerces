@@ -194,3 +194,24 @@ aside {
 .pages-box{
     width: 100%;
 }
+
+/* Styles for very small screens (less than 460px) */
+.login-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.social-login-buttons {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-login-button {
+    width: 100%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style/login.css">
+    
+    <!-- Media query links -->
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
+</head>
+<body>
+    <section id="login">
+        <div class="login-container">
+            <h1>Sign Up</h1>
+            <p class="login-description">Create your account to get started.</p>
+            
+            <form class="login-form">
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group password-group">
+                    <div class="password-header">
+                        <label>Password</label>
+                    </div>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                
+                <div class="form-group password-group">
+                    <div class="password-header">
+                        <label>Confirm Password</label>
+                    </div>
+                    <input type="password" placeholder="Confirm your password">
+                </div>
+                
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox">
+                        <span>I agree to the Terms & Conditions</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="sign-in-btn">Sign Up</button>
+            </form>
+            
+            <div class="divider">OR sign up with</div>
+            
+            <div class="social-buttons">
+                <button class="google-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/800px-Google_%22G%22_logo.svg.png" alt="Google" class="social-icon">
+                    Sign up with Google
+                </button>
+                <button class="facebook-btn">
+                    <img src="images/facebook-img.webp" alt="Facebook" class="social-icon">
+                    Sign up with Facebook
+                </button>
+            </div>
+            
+            <div class="signup-text">
+                <span>Already have an account?</span>
+                <a href="login.html" class="signup-link">Sign In</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

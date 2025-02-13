@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    margin: auto;
+    width: fit-content;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 500;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.login-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reset-password {
+    color: #ff5757;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+.remember-me {
+    margin-bottom: 24px;
+}
+
+.remember-me label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.divider {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 42%;
+    height: 1px;
+    background-color: #e2e8f0;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.social-buttons button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+.social-buttons img {
+    width: 20px;
+    height: 20px;
+}
+
+.signup-text {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.signup-link {
+    color: #ff5757;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+/* Hover states */
+.sign-in-btn:hover {
+    background-color: #ff4242;
+}
+
+.social-buttons button:hover {
+    background-color: #f8fafc;
+}
+
+.reset-password:hover,
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Focus states */
+input:focus {
+    outline: none;
+    border-color: #ff5757;
+}

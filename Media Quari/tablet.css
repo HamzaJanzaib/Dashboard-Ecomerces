@@ -55,3 +55,25 @@
         font-size: 12px;
         gap: 2px;
     }
+
+    /* Styles for tablets (769px - 1024px) */
+    .login-container {
+        width: 70%;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 25px;
+    }
+
+    .login-form input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-login-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .social-login-button {
+        flex: 1;
+    }
