@@ -99,7 +99,7 @@ loginForm?.addEventListener('submit', function (event) {
 
         setUserSession(adminUser, rememberMe);
         showAlert('Admin login successful!', 'success');
-        window.location.href = './ecomerce.html';
+        window.location.href = './Dashboard.html';
         return;
     }
 
@@ -118,7 +118,7 @@ loginForm?.addEventListener('submit', function (event) {
 
         setUserSession(currentUser, rememberMe);
         showAlert('Login successful!', 'success');
-        window.location.href = './Dashboard.html';
+        window.location.href = './ecomerce.html';
     } else {
         showAlert('Invalid email or password', 'error');
     }
@@ -160,220 +160,9 @@ const logout = () => {
 };
 
 
-let products = [
-
-    {
-        id: 0,
-        name: 'Natural Hub Cherry Karonda',
-        image: '/images/product-1.webp',
-        rating: 4.5,
-        waight: '1kg',
-        oldPrice: 65.00,
-        newPrice: 49.00,
-        category: 'Fruit',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 1,
-        name: 'Fresh Mango juice pack',
-        image: '/images/product-2.webp',
-        rating: 2.5,
-        waight: '600ml',
-        oldPrice: 35.38,
-        newPrice: 30.33,
-        category: 'Tuber root',
-        availability: 'Out of stock',
-        varity: "",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 2,
-        name: 'Multi Grain Combo Cookies',
-        image: '/images/product-3.webp',
-        rating: 3.9,
-        waight: '5kg',
-        oldPrice: 45.20,
-        newPrice: 38.63,
-        category: 'Cookies',
-        availability: 'In stock',
-        varity: "sale",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 3,
-        name: 'Natural Hub Cherry Karonda',
-        image: '/images/product-4.webp',
-        rating: 3.3,
-        waight: '5kg',
-        oldPrice: 45.20,
-        newPrice: 38.63,
-        category: 'Dried Fruits',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 4,
-        name: 'Stick Fiber Masala Magic',
-        image: '/images/product-5.webp',
-        rating: 4.5,
-        waight: '2kg',
-        oldPrice: 20.20,
-        newPrice: 18.63,
-        category: 'Foods',
-        availability: 'Out of stock',
-        varity: "",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 5,
-        name: 'Mixed Nuts Berries Pack',
-        image: '/images/product-6.webp',
-        rating: 4.5,
-        waight: '1.5kg',
-        oldPrice: 49.20,
-        newPrice: 42.13,
-        category: 'Dried Fruits',
-        availability: 'In stock',
-        varity: "sale",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 6,
-        name: 'Sungold Kiwifruit Punnet',
-        image: '/images/product-7.webp',
-        rating: 4.3,
-        waight: '500g',
-        oldPrice: 39.60,
-        newPrice: 33.00,
-        category: 'Fruit',
-        availability: 'In stock',
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-        varity: "new",
-    },
-    {
-        id: 7,
-        name: 'American Cream & Onion Flavour',
-        image: '/images/product-8.webp',
-        rating: 3.7,
-        waight: '200g',
-        oldPrice: 37.38,
-        newPrice: 29.33,
-        category: 'Snacks',
-        availability: 'Out of stock',
-        varity: "",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-
-    },
-    {
-        id: 8,
-        name: 'Dates Value Fresh Pouch',
-        image: '/images/product-9.webp',
-        rating: 3.9,
-        waight: '5kg',
-        oldPrice: 85.40,
-        newPrice: 66.30,
-        category: 'Dried Fruits',
-        availability: 'In stock',
-        varity: "sale",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 9,
-        name: 'Fresh Mango juice pack',
-        image: '/images/product-10.webp',
-        rating: 3.3,
-        waight: '1kg',
-        oldPrice: 21.20,
-        newPrice: 16.05,
-        category: 'Fresh Fruit',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 10,
-        name: 'Sweet Corn',
-        image: '/images/product-11.webp',
-        rating: 4.9,
-        waight: '3 pcs',
-        oldPrice: 17.20,
-        newPrice: 10.00,
-        category: 'Vegetables',
-        availability: 'Out of stock',
-        varity: "",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 11,
-        name: 'Kamalam Fruit',
-        image: '/images/product-12.webp',
-        rating: 5.0,
-        waight: '6pcs',
-        oldPrice: 80.20,
-        newPrice: 60.13,
-        category: 'Fresh Fruit',
-        availability: 'In stock',
-        varity: "sale",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 12,
-        name: 'Blue berry',
-        image: '/images/product-13.webp',
-        rating: 3.3,
-        waight: '8pcs',
-        oldPrice: 30.00,
-        newPrice: 26.13,
-        category: 'Fresh Fruit',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 13,
-        name: 'Pineapple',
-        image: '/images/product-14.webp',
-        rating: 4.0,
-        waight: '1pcs',
-        oldPrice: 22.00,
-        newPrice: 16.13,
-        category: 'Fresh Fruit',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 14,
-        name: 'Mixed Nuts & Almonds Dry Fruits',
-        image: '/images/product-15.webp',
-        rating: 4.6,
-        waight: '500g',
-        oldPrice: 49.00,
-        newPrice: 66.13,
-        category: 'Foods',
-        availability: 'Out of stock',
-        varity: "",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    },
-    {
-        id: 15,
-        name: 'Berry & Grapes',
-        image: '/images/product-16.webp',
-        rating: 2.6,
-        waight: '500g',
-        oldPrice: 49.00,
-        newPrice: 30.13,
-        category: 'Mix Snack',
-        availability: 'In stock',
-        varity: "new",
-        description: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They're also Low GI and Low Fodmap.",
-    }
+const _0x4c5956=_0x3d64;function _0xb7c4(){const _0x26ff8b=['28gvKKds','American\x20Cream\x20&\x20Onion\x20Flavour','906780BKrEfr','/images/product-15.webp','Tuber\x20root','In\x20stock','12801723JfIZiC','Cookies','/images/product-16.webp','200g','/images/product-14.webp','1242LjumxT','Foods','2256jljuwl','826080xosusw','Snacks','766XvAVSV','/images/product-6.webp','/images/product-2.webp','1941PDGcXs','1kg','/images/product-11.webp','5kg','/images/product-9.webp','/images/product-5.webp','Mix\x20Snack','Vegetables','/images/product-8.webp','Blue\x20berry','752425LivmhD','Stick\x20Fiber\x20Masala\x20Magic','Sweet\x20Corn','/images/product-3.webp','Out\x20of\x20stock','Natural\x20Hub\x20Cherry\x20Karonda','4995FlLwyx','1pcs','sale','51065ESgFjB','Dried\x20Fruits','Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.','/images/product-4.webp','Mixed\x20Nuts\x20Berries\x20Pack','1.5kg','Kamalam\x20Fruit','/images/product-1.webp','8pcs','/images/product-12.webp','Fruit','Fresh\x20Fruit','new','Pineapple'];_0xb7c4=function(){return _0x26ff8b;};return _0xb7c4();}function _0x3d64(_0x44a443,_0x433d0a){const _0xb7c4b2=_0xb7c4();return _0x3d64=function(_0x3d64c9,_0x581e9d){_0x3d64c9=_0x3d64c9-0x1b6;let _0x567801=_0xb7c4b2[_0x3d64c9];return _0x567801;},_0x3d64(_0x44a443,_0x433d0a);}(function(_0x3caadd,_0x4efd16){const _0x45ac5c=_0x3d64,_0x5dfea0=_0x3caadd();while(!![]){try{const _0x966af3=-parseInt(_0x45ac5c(0x1e2))/0x1+parseInt(_0x45ac5c(0x1bc))/0x2*(parseInt(_0x45ac5c(0x1bf))/0x3)+-parseInt(_0x45ac5c(0x1e0))/0x4*(parseInt(_0x45ac5c(0x1c9))/0x5)+-parseInt(_0x45ac5c(0x1b7))/0x6*(-parseInt(_0x45ac5c(0x1d2))/0x7)+parseInt(_0x45ac5c(0x1b9))/0x8*(-parseInt(_0x45ac5c(0x1cf))/0x9)+parseInt(_0x45ac5c(0x1ba))/0xa+parseInt(_0x45ac5c(0x1e6))/0xb;if(_0x966af3===_0x4efd16)break;else _0x5dfea0['push'](_0x5dfea0['shift']());}catch(_0x5ef6c4){_0x5dfea0['push'](_0x5dfea0['shift']());}}}(_0xb7c4,0xd8b1e));let products=[{'id':0x0,'name':_0x4c5956(0x1ce),'image':_0x4c5956(0x1d9),'rating':4.5,'waight':_0x4c5956(0x1c0),'oldPrice':0x41,'newPrice':0x31,'category':'Fruit','availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1de),'description':_0x4c5956(0x1d4)},{'id':0x1,'name':'Fresh\x20Mango\x20juice\x20pack','image':_0x4c5956(0x1be),'rating':2.5,'waight':'600ml','oldPrice':35.38,'newPrice':30.33,'category':_0x4c5956(0x1e4),'availability':_0x4c5956(0x1cd),'varity':'','description':_0x4c5956(0x1d4)},{'id':0x2,'name':'Multi\x20Grain\x20Combo\x20Cookies','image':_0x4c5956(0x1cc),'rating':3.9,'waight':'5kg','oldPrice':45.2,'newPrice':38.63,'category':_0x4c5956(0x1e7),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1d1),'description':_0x4c5956(0x1d4)},{'id':0x3,'name':_0x4c5956(0x1ce),'image':_0x4c5956(0x1d5),'rating':3.3,'waight':'5kg','oldPrice':45.2,'newPrice':38.63,'category':_0x4c5956(0x1d3),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1de),'description':_0x4c5956(0x1d4)},{'id':0x4,'name':_0x4c5956(0x1ca),'image':_0x4c5956(0x1c4),'rating':4.5,'waight':'2kg','oldPrice':20.2,'newPrice':18.63,'category':_0x4c5956(0x1b8),'availability':_0x4c5956(0x1cd),'varity':'','description':'Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.'},{'id':0x5,'name':_0x4c5956(0x1d6),'image':_0x4c5956(0x1bd),'rating':4.5,'waight':_0x4c5956(0x1d7),'oldPrice':49.2,'newPrice':42.13,'category':'Dried\x20Fruits','availability':'In\x20stock','varity':_0x4c5956(0x1d1),'description':_0x4c5956(0x1d4)},{'id':0x6,'name':'Sungold\x20Kiwifruit\x20Punnet','image':'/images/product-7.webp','rating':4.3,'waight':'500g','oldPrice':39.6,'newPrice':0x21,'category':_0x4c5956(0x1dc),'availability':_0x4c5956(0x1e5),'description':_0x4c5956(0x1d4),'varity':'new'},{'id':0x7,'name':_0x4c5956(0x1e1),'image':_0x4c5956(0x1c7),'rating':3.7,'waight':_0x4c5956(0x1e9),'oldPrice':37.38,'newPrice':29.33,'category':_0x4c5956(0x1bb),'availability':'Out\x20of\x20stock','varity':'','description':'Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.'},{'id':0x8,'name':'Dates\x20Value\x20Fresh\x20Pouch','image':_0x4c5956(0x1c3),'rating':3.9,'waight':_0x4c5956(0x1c2),'oldPrice':85.4,'newPrice':66.3,'category':_0x4c5956(0x1d3),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1d1),'description':_0x4c5956(0x1d4)},{'id':0x9,'name':'Fresh\x20Mango\x20juice\x20pack','image':'/images/product-10.webp','rating':3.3,'waight':_0x4c5956(0x1c0),'oldPrice':21.2,'newPrice':16.05,'category':_0x4c5956(0x1dd),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1de),'description':'Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.'},{'id':0xa,'name':_0x4c5956(0x1cb),'image':_0x4c5956(0x1c1),'rating':4.9,'waight':'3\x20pcs','oldPrice':17.2,'newPrice':0xa,'category':_0x4c5956(0x1c6),'availability':_0x4c5956(0x1cd),'varity':'','description':'Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.'},{'id':0xb,'name':_0x4c5956(0x1d8),'image':_0x4c5956(0x1db),'rating':0x5,'waight':'6pcs','oldPrice':80.2,'newPrice':60.13,'category':_0x4c5956(0x1dd),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1d1),'description':_0x4c5956(0x1d4)},{'id':0xc,'name':_0x4c5956(0x1c8),'image':'/images/product-13.webp','rating':3.3,'waight':_0x4c5956(0x1da),'oldPrice':0x1e,'newPrice':26.13,'category':'Fresh\x20Fruit','availability':_0x4c5956(0x1e5),'varity':'new','description':_0x4c5956(0x1d4)},{'id':0xd,'name':_0x4c5956(0x1df),'image':_0x4c5956(0x1b6),'rating':0x4,'waight':_0x4c5956(0x1d0),'oldPrice':0x16,'newPrice':16.13,'category':_0x4c5956(0x1dd),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1de),'description':_0x4c5956(0x1d4)},{'id':0xe,'name':'Mixed\x20Nuts\x20&\x20Almonds\x20Dry\x20Fruits','image':_0x4c5956(0x1e3),'rating':4.6,'waight':'500g','oldPrice':0x31,'newPrice':66.13,'category':_0x4c5956(0x1b8),'availability':'Out\x20of\x20stock','varity':'','description':_0x4c5956(0x1d4)},{'id':0xf,'name':'Berry\x20&\x20Grapes','image':_0x4c5956(0x1e8),'rating':2.6,'waight':'500g','oldPrice':0x31,'newPrice':30.13,'category':_0x4c5956(0x1c5),'availability':_0x4c5956(0x1e5),'varity':_0x4c5956(0x1de),'description':'Golden\x20and\x20gloriously\x20sweet.\x20Zespri™\x20SunGold™\x20Kiwifruit\x20taste\x20delicious\x20with\x20a\x20sweet\x20and\x20juicy\x20flavour,\x20making\x20them\x20perfect\x20for\x20a\x20snack\x20or\x20breakfast.\x20Just\x201\x20Zespri™\x20SunGold™\x20Kiwifruit\x20provides\x20100%\x20of\x20your\x20daily\x20vitamin\x20C\x20needs,\x20contributing\x20to\x20a\x20healthy\x20immune\x20system.\x20They\x27re\x20also\x20Low\x20GI\x20and\x20Low\x20Fodmap.'}];
 
 
-]
 let Newproducts = []
 
 console.log(Newproducts);
