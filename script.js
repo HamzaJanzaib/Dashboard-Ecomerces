@@ -99,7 +99,7 @@ loginForm?.addEventListener('submit', function (event) {
 
         setUserSession(adminUser, rememberMe);
         showAlert('Admin login successful!', 'success');
-        window.location.href = './Dashboard.html';
+        window.location.href = './ecomerce.html';
         return;
     }
 
@@ -118,7 +118,7 @@ loginForm?.addEventListener('submit', function (event) {
 
         setUserSession(currentUser, rememberMe);
         showAlert('Login successful!', 'success');
-        window.location.href = './manage.html';
+        window.location.href = './Dashboard.html';
     } else {
         showAlert('Invalid email or password', 'error');
     }
