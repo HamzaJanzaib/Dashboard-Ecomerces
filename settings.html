@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="style/aside.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/settings.css">
-    
+
     <!-- Media query for no-mobile devices -->
     <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
     <!-- Media query for mobile devices -->
     <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
-    
+
     <!-- Media query for tablets -->
     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
-    
+
     <!-- Media query for desktop -->
     <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
 </head>
@@ -38,19 +38,19 @@
                     </a>
                 </div>
 
-                <div  class="menu-item">
+                <div class="menu-item">
                     <a href="manage.html">
                         <span class="material-icons">manage_accounts</span>
                         <span class="menu-item-text">Manage Products</span>
                     </a>
                 </div>
-                <div  class="menu-item">
+                <div class="menu-item">
                     <a href="add-product.html">
                         <span class="material-icons">add_circle</span>
                         <span class="menu-item-text">Add Products</span>
                     </a>
                 </div>
-                <div  class="menu-item">
+                <div class="menu-item">
 
                     <a href="user-info.html">
                         <span class="material-icons">person</span>
@@ -88,18 +88,19 @@
                 <div class="profile-container">
                     <div class="profile-header">
                         <div class="cover-image">
-                            <img src="../Ecomerces-website/images/cover-purple.jpg" alt="Profile Cover">
-                            <button class="edit-cover-btn">Edit Cover</button>
+                            <img src="https://i.pinimg.com/originals/3b/a8/be/3ba8be43879f6dad1530b793a02bf219.gif"
+                                alt="Profile Cover">
+                            <button onclick="editCover()" class="edit-cover-btn">Edit Cover</button>
                         </div>
                         <div class="profile-info">
                             <div class="profile-avatar">
-                                    <img src="../Ecomerces-website/images/user.png" alt="Profile Picture">
+                                <img src="images/user.png" alt="Profile Picture">
                             </div>
                             <div class="profile-details">
-                                <h2 class="profile-name">Jane Daniel</h2>
+                                <h2 class="profile-name">John Doe</h2>
                                 <p class="profile-role">Agent</p>
                             </div>
-                            <button class="edit-profile-btn">Edit Profile</button>
+                            <button onclick="editProfile()" class="edit-profile-btn">Edit Profile</button>
                         </div>
                     </div>
                 </div>
@@ -132,15 +133,15 @@
                         <div class="settings-form">
                             <div class="form-group">
                                 <label>Current Password</label>
-                                <input type="password">
+                                <input type="password" id="currentPassword" placeholder="Enter current password">
                             </div>
                             <div class="form-group">
                                 <label>New Password</label>
-                                <input type="password">
+                                <input type="password" id="newPassword" placeholder="Enter new password">
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password</label>
-                                <input type="password">
+                                <input type="password" id="confirmPassword" placeholder="Confirm new password">
                             </div>
                             <button class="save-password-btn">Update Password</button>
                         </div>
@@ -161,6 +162,369 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        function editProfile() {
+            // Get existing profile data
+            const existingData = JSON.parse(localStorage.getItem('profileData')) || {};
+
+            Swal.fire({
+                title: 'Edit Profile',
+                html: `
+            <input type="text" id="name" class="swal2-input" placeholder="Full Name" value="${existingData.name || ''}">
+            <input type="text" id="role" class="swal2-input" placeholder="Role" value="${existingData.role || ''}" disabled>
+            <input type="email" id="email" class="swal2-input" placeholder="Email" value="${existingData.email || ''}">
+            <input type="text" id="number" class="swal2-input" placeholder="Phone Number" value="${existingData.number || ''}">
+            <label class="profileImage" for="profileImage">Upload Profile Image</label>
+            <input type="file" id="profileImage" class="swal2-file" accept="image/*">
+        `,
+                focusConfirm: false,
+                confirmButtonText: 'Save Changes',
+                showCancelButton: true,
+                preConfirm: () => {
+                    const formData = {
+                        name: document.getElementById('name').value.trim(),
+                        role: document.getElementById('role').value,
+                        email: document.getElementById('email').value.trim(),
+                        number: document.getElementById('number').value.trim(),
+                        image: document.getElementById('profileImage').files[0]
+                    };
+
+                    // Validation
+                    if (!formData.name) {
+                        Swal.showValidationMessage('Name is required');
+                        return false;
+                    }
+
+                    if (!formData.email) {
+                        Swal.showValidationMessage('Email is required');
+                        return false;
+                    }
+
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(formData.email)) {
+                        Swal.showValidationMessage('Please enter a valid email address');
+                        return false;
+                    }
+
+                    if (!formData.number) {
+                        Swal.showValidationMessage('Phone number is required');
+                        return false;
+                    }
+
+                    // Validate phone number format
+                    const phoneRegex = /^\+?\d{10,}$/;
+                    if (!phoneRegex.test(formData.number.replace(/\s+/g, ''))) {
+                        Swal.showValidationMessage('Please enter a valid phone number');
+                        return false;
+                    }
+
+                    return formData;
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    handleProfileUpdate(result.value, existingData);
+                }
+            });
+
+            // Add event listener for profile image preview
+            document.getElementById('profileImage').addEventListener('change', handleImageUpload);
+        }
+
+        function handleProfileUpdate(formData, existingData) {
+            if (formData.image) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    saveProfileData({
+                        name: formData.name,
+                        role: formData.role || existingData.role,
+                        email: formData.email || existingData.email,
+                        number: formData.number,
+                        image: {
+                            data: e.target.result,
+                            type: formData.image.type,
+                            name: formData.image.name
+                        }
+                    });
+                };
+                reader.readAsDataURL(formData.image);
+            } else {
+                saveProfileData({
+                    name: formData.name,
+                    role: formData.role || existingData.role,
+                    email: formData.email || existingData.email,
+                    number: formData.number,
+                    image: existingData.image || null
+                });
+            }
+        }
+
+        function handleImageUpload(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Validate file size (max 5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Image size should not exceed 5MB',
+                        icon: 'error'
+                    });
+                    e.target.value = '';
+                    return;
+                }
+
+                // Validate file type
+                if (!file.type.startsWith('image/')) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Please upload an image file',
+                        icon: 'error'
+                    });
+                    e.target.value = '';
+                    return;
+                }
+            }
+        }
+
+        function saveProfileData(profileData) {
+            localStorage.setItem('profileData', JSON.stringify(profileData));
+
+            Swal.fire({
+                title: 'Success!',
+                text: 'Profile updated successfully',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.reload();
+            });
+        }
+
+        // Function to show current profile data
+        function displayProfileData() {
+            const profileData = JSON.parse(localStorage.getItem('profileData')) || {};
+            const coverData = JSON.parse(localStorage.getItem('coverImage'));
+            
+            // Update profile name and role in header
+            if (profileData.name) {
+                document.querySelector('.profile-name').textContent = profileData.name;
+                // Update name in form
+                document.querySelector('.settings-form input[value="Jane Daniel"]').value = profileData.name;
+            }
+            
+            if (profileData.role) {
+                document.querySelector('.profile-role').textContent = profileData.role;
+                // Update role in form
+                document.querySelector('.settings-form input[value="Agent"]').value = profileData.role;
+            }
+
+            // Update email in form if exists
+            if (profileData.email) {
+                document.querySelector('.settings-form input[type="email"]').value = profileData.email;
+            }
+
+            // Update phone in form if exists
+            if (profileData.number) {
+                document.querySelector('.settings-form input[type="tel"]').value = profileData.number;
+            }
+            
+            // Update profile images
+            if (profileData.image && profileData.image.data) {
+                const profileImages = document.querySelectorAll('.profile-avatar img, .profile img');
+                profileImages.forEach(img => {
+                    img.src = profileData.image.data;
+                });
+            }
+
+            // Update cover image if exists
+            if (coverData && coverData.data) {
+                updateCoverImage(coverData.data);
+            }
+        }
+
+        // Add event listener to the save password button
+        document.querySelector('.save-password-btn').addEventListener('click', updatePassword);
+
+        // Modify the updatePassword function with improved validation
+        function updatePassword() {
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Enhanced validation
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Please fill in all password fields',
+                });
+                return;
+            }
+
+            // Check if there's a stored password, if not, set a default one for first-time use
+            const storedPassword = localStorage.getItem('password') || '123456';
+            
+            if (currentPassword !== storedPassword) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Password',
+                    text: 'Current password is incorrect',
+                });
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Password Mismatch',
+                    text: 'New passwords do not match',
+                });
+                return;
+            }
+
+            // Simpler password validation
+            if (newPassword.length < 6) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Weak Password',
+                    text: 'Password must be at least 6 characters long',
+                });
+                return;
+            }
+
+            // Save the new password
+            localStorage.setItem('password', newPassword);
+            
+            // Clear the password fields
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Password updated successfully',
+            });
+        }
+
+        // Add event listener to show/hide password functionality
+        function addPasswordToggle() {
+            const passwordFields = document.querySelectorAll('input[type="password"]');
+            
+            passwordFields.forEach(field => {
+                const toggleBtn = document.createElement('span');
+                toggleBtn.innerHTML = '👁️';
+                toggleBtn.className = 'password-toggle';
+                toggleBtn.style.cursor = 'pointer';
+                toggleBtn.style.position = 'absolute';
+                toggleBtn.style.right = '10px';
+                toggleBtn.style.top = '50%';
+                toggleBtn.style.transform = 'translateY(-50%)';
+                
+                field.parentElement.style.position = 'relative';
+                field.parentElement.appendChild(toggleBtn);
+                
+                toggleBtn.addEventListener('click', () => {
+                    if (field.type === 'password') {
+                        field.type = 'text';
+                        toggleBtn.innerHTML = '👁️‍🗨️';
+                    } else {
+                        field.type = 'password';
+                        toggleBtn.innerHTML = '👁️';
+                    }
+                });
+            });
+        }
+
+        // Add this function to check current password
+        function checkCurrentPassword() {
+            const storedPassword = localStorage.getItem('password') || '123456';
+            console.log('Current password:', storedPassword);
+        }
+
+        // Update the DOMContentLoaded event listener
+        document.addEventListener('DOMContentLoaded', () => {
+            displayProfileData();
+            addPasswordToggle();
+            checkCurrentPassword();
+        });
+
+        // Add this function to handle cover image editing
+        function editCover() {
+            Swal.fire({
+                title: 'Edit Cover Image',
+                html: `
+                    <label class="coverImage" for="coverImage">Upload Cover Image</label>
+                    <input type="file" id="coverImage" class="swal2-file" accept="image/*">
+                `,
+                focusConfirm: false,
+                confirmButtonText: 'Save Changes',
+                showCancelButton: true,
+                preConfirm: () => {
+                    const coverImage = document.getElementById('coverImage').files[0];
+                    
+                    if (!coverImage) {
+                        Swal.showValidationMessage('Please select an image');
+                        return false;
+                    }
+
+                    // Validate file size (max 5MB)
+                    if (coverImage.size > 5 * 1024 * 1024) {
+                        Swal.showValidationMessage('Image size should not exceed 5MB');
+                        return false;
+                    }
+
+                    // Validate file type
+                    if (!coverImage.type.startsWith('image/')) {
+                        Swal.showValidationMessage('Please upload an image file');
+                        return false;
+                    }
+
+                    return { coverImage };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    handleCoverUpdate(result.value.coverImage);
+                }
+            });
+        }
+
+        // Function to handle cover image update
+        function handleCoverUpdate(coverImage) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const coverData = {
+                    data: e.target.result,
+                    type: coverImage.type,
+                    name: coverImage.name
+                };
+                
+                // Save cover image to localStorage
+                localStorage.setItem('coverImage', JSON.stringify(coverData));
+                
+                // Update cover image display
+                updateCoverImage(coverData.data);
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Cover image updated successfully',
+                });
+            };
+            reader.readAsDataURL(coverImage);
+        }
+
+        // Function to update cover image display
+        function updateCoverImage(imageData) {
+            const coverImage = document.querySelector('.cover-image img');
+            if (coverImage) {
+                coverImage.src = imageData;
+            }
+        }
+
+
+    </script>
 </body>
 
 

@@ -99,7 +99,7 @@ loginForm?.addEventListener('submit', function (event) {
 
         setUserSession(adminUser, rememberMe);
         showAlert('Admin login successful!', 'success');
-        window.location.href = './index.html';
+        window.location.href = './Dashboard.html';
         return;
     }
 
@@ -147,7 +147,7 @@ function setUserSession(user, rememberMe) {
     }
 }
 
-function showAlert(message, ) {
+function showAlert(message,) {
     // You can replace this with a better UI notification
     alert(message);
 }
@@ -394,57 +394,65 @@ function addProduct() {
     const productRating = parseFloat(document.getElementById('product-rating').value);
     const productOldPrice = parseFloat(document.getElementById('product-price').value);
     const productNewPrice = parseFloat(document.getElementById('product-special-price').value);
-    const productImage = document.getElementById('file-upload').files[0]?.name || '';
-
-    // Get all input values from addproducts.html form
-    const productData = {
-        name: productName,
-        category: productCategory,
-        sku: productSku,
-        waight: productWeight,
-        description: productDescription,
-        varity: productStatus,
-        availability: productStock,
-        rating: productRating,
-        oldPrice: productOldPrice,
-        newPrice: productNewPrice,
-        image: `/images/${productImage}`,
-    };
+    const productImageFile = document.getElementById('file-upload').files[0];
 
     // Validate required fields
-    if (!productData.name || !productData.category || !productData.oldPrice) {
+    if (!productName || !productCategory || !productOldPrice) {
         alert('Please fill in all required fields (Name, Category, Price)');
         return;
     }
 
-    if (isNaN(productData.rating) || productData.rating < 0 || productData.rating > 5) {
+    if (isNaN(productRating) || productRating < 0 || productRating > 5) {
         alert('Rating must be a number between 0 and 5');
         return;
     }
 
-    if (isNaN(productData.oldPrice) || productData.oldPrice < 0) {
+    if (isNaN(productOldPrice) || productOldPrice < 0) {
         alert('Price must be a positive number');
         return;
     }
 
-    // Get existing products from localStorage
-    const existingProducts = JSON.parse(localStorage.getItem('products')) || [];
+    if (productImageFile) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            // Create product data object with image as blob
+            const productData = {
+                name: productName,
+                category: productCategory,
+                sku: productSku,
+                waight: productWeight,
+                description: productDescription,
+                varity: productStatus,
+                availability: productStock,
+                rating: productRating,
+                oldPrice: productOldPrice,
+                newPrice: productNewPrice,
+                image: e.target.result
+            };
 
-    // Add ID to new product
-    productData.id = existingProducts.length + 1;
+            // Get existing products from localStorage
+            const existingProducts = JSON.parse(localStorage.getItem('products')) || [];
 
-    // Add new product to existing products
-    existingProducts.push(productData);
+            // Add ID to new product
+            productData.id = existingProducts.length + 1;
 
-    // Save updated products array to localStorage
-    localStorage.setItem('products', JSON.stringify(existingProducts));
+            // Add new product to existing products
+            existingProducts.push(productData);
 
-    console.log('Product added successfully:', productData);
-    console.log('All Products:', existingProducts);
+            // Save updated products array to localStorage
+            localStorage.setItem('products', JSON.stringify(existingProducts));
 
-    alert('Product added successfully!');
-    clearForm();
-    window.location.href = 'manage.html';
+            console.log('Product added successfully:', productData);
+            console.log('All Products:', existingProducts);
+
+            alert('Product added successfully!');
+            clearForm();
+            window.location.href = 'manage.html';
+        };
+        reader.readAsDataURL(productImageFile);
+    } else {
+        alert('Please select an image file');
+    }
 }
 
 function clearForm() {
@@ -465,7 +473,6 @@ function cancelProduct() {
     clearForm();
     window.location.href = 'manage.html';
 }
-
 
 function renderProducts() {
     const productsList = document.getElementById('table-body');
@@ -492,7 +499,7 @@ function renderProducts() {
                 <td>$${product.newPrice}</td>
                 <td>
                     <div class="stock-info">
-                        <div>${product.availability} Item <span>${product.varity}</span></div>
+                        <div>${product.availability}</div>
                         <div class="sold">${Math.floor(Math.random() * 100)} Sold</div>
                     </div>
                 </td>
@@ -501,7 +508,7 @@ function renderProducts() {
                     <div class="rating">
                         <span class="star">★</span>
                         <span class="rating-value">${product.rating}</span>
-                        <span class="review-count">${Math.floor(Math.random() * 100)} Review</span>
+                        <span class="review-count">${Math.floor(Math.random() * 100)} Reviews</span>
                     </div>
                 </td>
                 <td>
@@ -741,8 +748,8 @@ document.getElementById('sort-by').addEventListener('change', function () {
 document.getElementById('search-filter').addEventListener('input', (e) => {
     // Filter out special characters and extra spaces from search input
     const searchTerm = e.target.value.toLowerCase().trim()
-        
-        // console.log(searchTerm);
+
+    // console.log(searchTerm);
 
     const products = JSON.parse(localStorage.getItem('products')) || [];
 
@@ -789,8 +796,3 @@ document.getElementById('search-filter').addEventListener('input', (e) => {
 
     productsList.innerHTML = productsHTML;
 });
-
-
-
-
-
