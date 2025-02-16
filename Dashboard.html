@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Media query for no-mobile devices -->
-     <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
-     <!-- Media query for mobile devices -->
-     <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
-    
-     <!-- Media query for tablets -->
-     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css"> 
-     
-     <!-- Media query for large screens -->
-     <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
+    <!-- Media query for no-mobile devices -->
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
+    <!-- Media query for mobile devices -->
+    <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
+
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
+
+    <!-- Media query for large screens -->
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
 </head>
 
 <body>
@@ -259,64 +259,70 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script >
+    <script src="script.js"></script>
+    <script>
 
-const ctx = document.getElementById('myChart');
+        const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Sindh', 'Punjab', 'Balochistan', 'KPK', 'FATA', 'Other'],
-        datasets: [{
-            label: 'Our Sales',
-            data: [2, 12, 3, 9, 2, 3],
-            borderWidth: 1,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)', 
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)', 
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ]
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Sindh', 'Punjab', 'Balochistan', 'KPK', 'FATA', 'Other'],
+                datasets: [{
+                    label: 'Our Sales',
+                    data: [2, 12, 3, 9, 2, 3],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ]
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-        }
-    }
-});
+        });
 
-// Conversion Chart
-const conversionChart = new Chart(document.getElementById('conversionChart'), {
-    type: 'doughnut',
-    data: {
-        datasets: [{
-            data: [65.2, 34.8],
-            backgroundColor: ['#ff6b6b', '#282E33'],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        cutout: '75%',
-        plugins: {
-            legend: {
-                display: false
+        // Conversion Chart
+        const conversionChart = new Chart(document.getElementById('conversionChart'), {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [65.2, 34.8],
+                    backgroundColor: ['#ff6b6b', '#282E33'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutout: '75%',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
-        }
-    }
-});
+        });
+
+      
+
+
+
 
     </script>
 </body>

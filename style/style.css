@@ -1082,3 +1082,26 @@ input:checked + .slider:before {
         min-width: 800px;
     }
 }
+
+.pay-btn{
+    background: #2ecc71;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pay-btn span{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+.pay-btn span i{
+    font-size: 14px;
+}

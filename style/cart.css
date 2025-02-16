@@ -1,0 +1,138 @@
+#card{
+    width: 100%;
+    height: 100vh;
+}
+
+.card-top{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.card-top h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #5B6773;
+}
+
+.card-top h4:nth-child(1){
+    font-size: 20px;
+    font-weight: 800;
+    color: #5B6773;
+}
+
+.card-top h4 span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5CAF90;
+}
+
+.card-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-bottom table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.td-image-main {
+    text-align: left;
+}
+
+.td-image {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.td-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.td-image h4 {
+    margin: 0;
+    color: #666;
+}
+
+.quantity-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.continue-shopping {
+    text-decoration: none;
+    color: #666;
+}
+
+.checkout-btn {
+    background-color: #82ae46;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete-btn {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.cart-summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-total {
+    color: #82ae46;
+}
+
+.cart-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

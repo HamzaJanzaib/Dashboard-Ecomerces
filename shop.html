@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop-page</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./style/E-Header.css">
+    <link rel="stylesheet" href="./style/E-style.css">
+    <link rel="stylesheet" href="./style/E-shop.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/style/E-shop.css">
+</head>
+
+<body>
+    <main>
+        <!-- Header section containing logo, search and user options -->
+        <header>
+            <!-- Logo container -->
+            <div class="logo">
+                <img src="./images/logo-image.png" alt="Organic Food Store Logo">
+            </div>
+            <!-- Search bar container -->
+            <div class="search">
+                <input type="text" placeholder="Search Product..." aria-label="Search products">
+                <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+            </div>
+            <!-- User options container (login and cart) -->
+            <div class="third">
+                <!-- Login/Account section -->
+                <div class="login">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                    <a href="#" aria-label="Account and Login">Account
+                        <br>
+                        <span>Login</span>
+                    </a>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Shopping cart section -->
+                <div class="cart">
+                    <i class="material-icons" aria-hidden="true">shopping_cart</i>
+                    <a href="productscart.html" aria-label="Shopping Cart">Cart
+                        <br>
+                        <span>0 Items</span>
+                    </a>
+
+                </div>
+            </div>
+        </header>
+        <section id="menu-section2">
+            <div class="menu-section-left">
+                <div class="categories">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                    <span>All Categories</span>
+                    <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+                </div>
+            </div>
+
+            <nav class="menu-section-center">
+                <div class="menu-section-center-box">
+                    <ul>
+                        <li><a href="ecommerce.html" aria-current="page">Home</a></li>
+                        <li id="active"><a href="shop.html">shop</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <div class="menu-section-right">
+                <div class="location">
+                    <i class="material-icons" aria-hidden="true">location_on</i>
+                    <select name="location" id="location" aria-label="Select location">
+                        <option value="pakistan">Pakistan</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop-section">
+            <div class="shop-container">
+                <!-- Category Sidebar -->
+                <div class="sidebar">
+                    <div class="category-filter">
+                        <h3>Category</h3>
+                        <div class="category-item">
+                            <span>Clothes</span>
+                            <div class="sub-categories">
+                                <div class="sub-category">
+                                    <span>Men</span>
+                                    <span>-25</span>
+                                </div>
+                                <div class="sub-category">
+                                    <span>Women</span>
+                                    <span>-52</span>
+                                </div>
+                                <div class="sub-category">
+                                    <span>Boy</span>
+                                    <span>-40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <span>Cosmetics</span>
+                            <span>+</span>
+                        </div>
+                        <div class="category-item">
+                            <span>Shoes</span>
+                            <span>-15</span>
+                        </div>
+                        <div class="category-item">
+                            <span>Bag</span>
+                            <span>-27</span>
+                        </div>
+                        <div class="category-item">
+                            <span>Electronics</span>
+                            <span>+</span>
+                        </div>
+                        <div class="category-item">
+                            <span>Brand</span>
+                            <span>+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="shop-content">
+                    <!-- Filter Bar -->
+                    <div class="filter-bar">
+                        <div class="view-options">
+                            <button class="grid-view active">
+                                <i class="material-icons">grid_view</i>
+                            </button>
+                            <button class="list-view">
+                                <i class="material-icons">view_list</i>
+                            </button>
+                        </div>
+                        <div class="active-filters">
+                            <div class="filter-tag">
+                                Clothes <button class="remove-filter">×</button>
+                            </div>
+                            <div class="filter-tag">
+                                Fruits <button class="remove-filter">×</button>
+                            </div>
+                            <div class="filter-tag">
+                                Snacks <button class="remove-filter">×</button>
+                            </div>
+                            <div class="filter-tag">
+                                Dairy <button class="remove-filter">×</button>
+                            </div>
+                            <div class="filter-tag">
+                                Perfume <button class="remove-filter">×</button>
+                            </div>
+                            <div class="filter-tag">
+                                Jewelry <button class="remove-filter">×</button>
+                            </div>
+                            <button class="clear-all">Clear All</button>
+                        </div>
+                        <div class="sort-options">
+                            <span>Price, high to low</span>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+
+
+
+                        <!-- More product cards would go here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="footer">
+            <div class="footer-left">
+                <img src="/images/logo-image.png" alt="">
+                <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
+                <div class="foter-socal">
+                    <img src="/images/android.webp" alt="">
+                    <img src="/images/apple.webp" alt="">
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-box">
+                    <h1>categories</h1>
+                    <ul>
+                        <li>foods</li>
+                        <li>Fruits</li>
+                        <li>Dried Fruits</li>
+                        <li>cockies</li>
+                        <li>Vegetables</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>company</h1>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">teams & policy</a></li>
+                        <li><a href="privacy.html">Private-policy</a></li>
+
+
+
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Account</h1>
+                    <ul>
+                        <li><a href="login.html">sign in</a></li>
+                        <li><a href="registration.html">Regstration</a></li>
+                        <li><a href="card.html">view cart</a></li>
+                        <li>return-policy</li>
+                        <li>payments</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Contact</h1>
+                    <p> <i class="material-icons" aria-hidden="true">location_on</i> masoom shah colony kalapul karachi
+                    </p>
+                    <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
+                    <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
+
+                    <div class="socal-icons">
+                        <a href="#"><img src="/images/facebook-img.webp" alt=""></a>
+                        <a href="#"><img src="/images/linkedin-img.webp" alt=""></a>
+                        <a href="#"><img src="/images/instagram-img.webp" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // // Get products from localStorage
+        // const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+        // console.log(storedProducts);
+        // storedProducts.forEach(product => {
+        //     console.log(product);
+        //     const productCard = document.createElement('div');
+        //     productCard.classList.add('product-card');
+        //     productCard.innerHTML = `
+        //      <div class="card-box">
+        //     <div class="card-image-box">
+        //         <img src="${product.image}" alt="${product.name}">
+        //     </div>
+        //     <p>${product.category}</p>
+        //     <h2>${product.name}</h2>
+        //     <div class="card-rating-box">
+        //         <div class="rating">
+        //             <span>(${product.rating})<i class="material-icons" aria-hidden="true">star</i></span>
+        //         </div>
+        //         <div class="waight">
+        //             <span>${product.waight}</span>
+        //         </div>
+        //     </div>
+        //     <div class="card-price-box">
+        //         <span id="new-price">$${product.newPrice.toFixed(2)}</span>
+        //         <span id="old-price">$${product.oldPrice.toFixed(2)}</span>
+        //     </div>
+        //     <div class="card-icon-box">
+        //         <i class="material-icons" data-index="${product.id}" id="cart-icon" aria-hidden="true">shopping_cart</i>
+        //         <i class="material-icons" data-index="${product.id}" id="details-icon" aria-hidden="true">info</i>
+        //         <div class="stock">
+        //             <span>${product.availability}</span>
+        //         </div>
+        //         <div class="varity">${product.varity}</div>
+        //     </div>
+        // </div>
+        //     `;
+        //     document.querySelector('.products-grid').appendChild(productCard);
+        // });
+        // // Add event listener to cart icons
+        // document.querySelectorAll('#cart-icon').forEach(icon => {
+        //     icon.addEventListener('click', (e) => {
+        //         // Get clicked product index
+        //         const index = e.target.dataset.index;
+
+        //         // Get current user info
+        //         const currentUser = localStorage.getItem('userId') || 'guest';
+
+        //         // Get products and find selected one
+        //         const products = JSON.parse(localStorage.getItem('products')) || [];
+        //         const selectedProduct = products[index];
+
+        //         // Check if product is out of stock
+        //         if (selectedProduct.availability.toLowerCase().trim() === 'out of stock') {
+        //             Swal.fire({
+        //                 title: 'Out of Stock!',
+        //                 text: 'This product is currently unavailable',
+        //                 icon: 'error',
+        //                 confirmButtonText: 'OK'
+        //             });
+        //             return; // Exit early if out of stock
+        //         }
+
+        //         // Get existing cart
+        //         const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        //         // Generate order ID and timestamp
+        //         const orderId = Math.floor(100000 + Math.random() * 900000);
+        //         const orderTime = new Date().toISOString();
+
+        //         // Create cart item with order details
+        //         const cartItem = {
+        //             ...selectedProduct,
+        //             quantity: 1,
+        //             orderId: orderId,
+        //             orderTime: orderTime,
+        //             userId: currentUser
+        //         };
+
+        //         // Add to cart
+        //         cart.push(cartItem);
+
+        //         // Save cart to localStorage
+        //         localStorage.setItem('cart', JSON.stringify(cart));
+
+        //         // Update cart count in header
+        //         const cartCount = document.querySelector('.cart span');
+        //         if (cartCount) {
+        //             cartCount.textContent = `${cart.length} Items`;
+        //         }
+
+        //         // Show success message
+        //         Swal.fire({
+        //             title: 'Added to Cart!',
+        //             text: `Order ID: ${orderId}`,
+        //             icon: 'success',
+        //             confirmButtonText: 'OK'
+        //         });
+        //     });
+        // });
+        // // Update stock color and variety styles for all products
+        // function updateStockAndVarietyStyles() {
+        //     // Update stock status colors
+        //     document.querySelectorAll('.stock span').forEach(stockSpan => {
+        //         const stockText = stockSpan.textContent.trim().toLowerCase();
+        //         if (stockText === 'in stock') {
+        //             stockSpan.style.color = '#5CAF90'; // Green for in stock
+        //         } else if (stockText === 'out of stock') {
+        //             stockSpan.style.color = '#FF0000'; // Red for out of stock
+        //         } else if (stockText === 'low stock') {
+        //             stockSpan.style.color = '#FFA500'; // Orange for low stock
+        //         }
+        //     });
+        //     document.querySelectorAll(".varity").forEach(varity => {
+        //         const text = varity.textContent.trim().toLowerCase();
+        //         if (text === "sale") {
+        //             varity.style.backgroundColor = '#FF0000';
+        //             varity.style.display = "block";
+        //         } else if (text === "new") {
+        //             varity.style.backgroundColor = '#5CAF90'; 
+        //             varity.style.display = "block";
+        //         } else if (text === "all") {
+        //             varity.style.backgroundColor = '#007bff';
+        //             varity.style.display = "block";
+        //         } else {
+        //             varity.style.display = "none";
+        //         }
+        //     });
+        // }
+        // updateStockAndVarietyStyles();
+
+    </script>
+</body>
+
+</html>

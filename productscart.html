@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-page</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./style/E-Header.css">
+    <link rel="stylesheet" href="./style/E-style.css">
+    <link rel="stylesheet" href="./style/cart.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Header section containing logo, search and user options -->
+        <header>
+            <!-- Logo container -->
+            <div class="logo">
+                <img src="./images/logo-image.png" alt="Organic Food Store Logo">
+            </div>
+            <!-- Search bar container -->
+            <div class="search">
+                <input type="text" placeholder="Search Product..." aria-label="Search products">
+                <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+            </div>
+            <!-- User options container (login and cart) -->
+            <div class="third">
+                <!-- Login/Account section -->
+                <div class="login">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                    <a href="userinfo.html" aria-label="Account and Login">Account
+                        <br>
+                        <span>ADD info</span>
+                    </a>
+                </div>
+                <!-- Shopping cart section -->
+                <div class="cart">
+                    <i class="material-icons" aria-hidden="true">shopping_cart</i>
+                    <a href="productscart.html" aria-label="Shopping Cart">Cart
+                        <br>
+                        <span>0 Items</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="menu-section2">
+            <div class="menu-section-left">
+                <div class="categories">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                    <span>All Categories</span>
+                    <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+                </div>
+            </div>
+
+            <nav class="menu-section-center">
+                <div class="menu-section-center-box">
+                    <ul>
+                        <li><a href="ecommerce.html" aria-current="page">Home</a></li>
+                        <li><a href="shop.html">shop</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="menu-section-right">
+                <div class="location">
+                    <i class="material-icons" aria-hidden="true">location_on</i>
+                    <select name="location" id="location" aria-label="Select location">
+                        <option value="pakistan">Pakistan</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="card">
+            <div class="card-top">
+                <h4>Shopping Cart</h4>
+                <h4>Home > <span> Cart</span></h4>
+            </div>
+
+            <div class="card-bottom">
+                <table id="cart-table">
+                    <tr>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Total</td>
+                        <td>Action</td>
+                    </tr>
+                </table>
+
+                <div class="cart-actions">
+                    <div class="cart-summary">
+                        <span>Total: </span>
+                        <span class="cart-total">$0.00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <a href="shop.html" class="continue-shopping">Continue Shopping</a>
+                        <button class="checkout-btn">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-left">
+                <img src="./images/logo-image.png" alt="">
+                <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
+                <div class="foter-socal">
+                    <img src="./images/android.webp" alt="">
+                    <img src="./images/apple.webp" alt="">
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-box">
+                    <h1>categories</h1>
+                    <ul>
+                        <li>foods</li>
+                        <li>Fruits</li>
+                        <li>Dried Fruits</li>
+                        <li>cockies</li>
+                        <li>Vegetables</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>company</h1>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">teams & policy</a></li>
+                        <li><a href="#">Private-policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Account</h1>
+                    <ul>
+                        <li><a href="register.html">sign in</a></li>
+                        <li><a href="register.html">Regstration</a></li>
+                        <li><a href="productscart.html">view cart</a></li>
+                        <li>return-policy</li>
+                        <li>payments</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Contact</h1>
+                    <p> <i class="material-icons" aria-hidden="true">location_on</i> masoom shah colony kalapul karachi
+                    </p>
+                    <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
+                    <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
+
+                    <div class="socal-icons">
+                        <a href="#"><img src="./images/facebook-img.webp" alt=""></a>
+                        <a href="#"><img src="./images/linkedin-img.webp" alt=""></a>
+                        <a href="#"><img src="./images/instagram-img.webp" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        //     // Get cart table element
+        // const carttable = document.getElementById('cart-table');
+        
+        // // Get cart data from localStorage
+        // const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // let table = '<tr><td>Product</td><td>Price</td><td>Quantity</td><td>Total</td><td>Action</td></tr>';
+
+        // // Generate table rows for each cart item
+        // cart.forEach((item, index) => {
+        //     if (item && item.newPrice) { // Check if item and newPrice exist
+        //         table += `
+        //         <tr>
+        //             <td class="td-image-main">
+        //                 <div class="td-image">
+        //                     <img src="${item.image || ''}" alt="${item.name || ''}">
+        //                     <h4>${item.name || ''}</h4>
+        //                 </div>
+        //             </td>
+        //             <td>$${item.newPrice.toFixed(2)}</td>
+        //             <td class="quantity-cell">
+        //                 <button class="quantity-btn minus" data-index="${index}">-</button>
+        //                 <span>${item.quantity || 1}</span>
+        //                 <button class="quantity-btn plus" data-index="${index}">+</button>
+        //             </td>
+        //             <td>$${((item.newPrice || 0) * (item.quantity || 1)).toFixed(2)}</td>
+        //             <td><i class="material-icons delete-btn" data-index="${index}" aria-hidden="true">delete</i></td>
+        //         </tr>`;
+        //     }
+        // });
+
+        // // Insert table HTML
+        // carttable.innerHTML = table;
+
+        // // Calculate and display total
+        // function updateCartTotal() {
+        //     const total = cart.reduce((sum, item) => {
+        //         if (item && item.newPrice && item.quantity) {
+        //             return sum + (item.newPrice * item.quantity);
+        //         }
+        //         return sum;
+        //     }, 0);
+        //     const cartTotalElement = document.querySelector('.cart-total');
+        //     if (cartTotalElement) {
+        //         cartTotalElement.textContent = `$${total.toFixed(2)}`;
+        //     }
+        // }
+
+        // // Handle quantity changes
+        // document.querySelectorAll('.quantity-btn').forEach(btn => {
+        //     btn.addEventListener('click', (e) => {
+        //         const index = parseInt(e.target.dataset.index);
+        //         if (cart[index]) {
+        //             if (e.target.classList.contains('plus')) {
+        //                 cart[index].quantity = (cart[index].quantity || 1) + 1;
+        //             } else if ((cart[index].quantity || 1) > 1) {
+        //                 cart[index].quantity--;
+        //             }
+        //             localStorage.setItem('cart', JSON.stringify(cart));
+        //             updateCartTotal();
+        //             location.reload();
+        //         }
+        //     });
+        // });
+
+        // // Handle item deletion
+        // document.querySelectorAll('.delete-btn').forEach(btn => {
+        //     btn.addEventListener('click', (e) => {
+        //         const index = parseInt(e.target.dataset.index);
+        //         if (cart[index]) {
+        //             cart.splice(index, 1);
+        //             localStorage.setItem('cart', JSON.stringify(cart));
+        //             updateCartTotal();
+        //             location.reload();
+        //         }
+        //     });
+        // });
+
+        // // Handle checkout
+        // document.querySelector('.checkout-btn')?.addEventListener('click', () => {
+        //     const currentUser = JSON.parse(localStorage.getItem('currentUser') || sessionStorage.getItem('currentUser'));
+            
+        //     if (!currentUser) {
+        //         alert('Please login first to checkout');
+        //         window.location.href = 'login.html';
+        //         return;
+        //     }
+
+        //     // Get userData from localStorage
+        //     let userData = JSON.parse(localStorage.getItem('userData')) || [];
+            
+        //     // Find current user in userData
+        //     const userIndex = userData.findIndex(user => user.email === currentUser.email);
+            
+        //     if (userIndex !== -1) {
+        //         // Add cart items to user's cart
+        //         userData[userIndex].cart = [...(userData[userIndex].cart || []), ...cart];
+                
+        //         // Update userData in localStorage
+        //         localStorage.setItem('userData', JSON.stringify(userData));
+                
+        //         // Update parent window cart
+        //         if (window.parent) {
+        //             window.parent.cart = userData[userIndex].cart;
+        //         }
+                
+        //         // Clear the current cart
+        //         localStorage.setItem('cart', JSON.stringify([]));
+                
+        //         alert('Checkout successful! Items added to your account.');
+        //         location.reload();
+        //     }
+        // });
+
+        // // Initialize total on page load
+        // updateCartTotal();
+    </script>
+</body>
+
+</html>

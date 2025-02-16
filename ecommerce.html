@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Food Store</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./style/E-style.css">
+    <link rel="stylesheet" href="./style/E-Header.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Header section containing logo, search and user options -->
+        <header>
+            <!-- Logo container -->
+            <div class="logo">
+                <img src="./images/logo-image.png" alt="Organic Food Store Logo">
+            </div>
+            <!-- Search bar container -->
+            <div class="search">
+                <input type="text" placeholder="Search Product..." aria-label="Search products">
+                <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+            </div>
+            <!-- User options container (login and cart) -->
+            <div class="third">
+                <!-- Logout button -->
+                <div class="logout">
+                    <i onclick="handleLogout()" class="material-icons" aria-hidden="true">logout</i>
+                </div>
+                <!-- Login/Account section -->
+                <div class="login">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                    <a href="userinfo.html" aria-label="Account and Login">Account
+                        <br>
+                        <span>ADD info</span>
+                    </a>
+                </div>
+                <!-- Shopping cart section -->
+                <div class="cart">
+                    <i class="material-icons" aria-hidden="true">shopping_cart</i>
+                    <a href="productscart.html" aria-label="Shopping Cart">Cart
+                        <br>
+                        <span>0 Items</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section id="menu-section2">
+            <div class="menu-section-left">
+                <div class="categories">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                    <span>All Categories</span>
+                    <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+                </div>
+            </div>
+
+            <nav class="menu-section-center">
+                <div class="menu-section-center-box">
+                    <ul>
+                        <li id="active"><a href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="shop.html">shop</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html" aria-current="page">contact</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <div class="menu-section-right">
+                <div class="location">
+                    <i class="material-icons" aria-hidden="true">location_on</i>
+                    <select name="location" id="location" aria-label="Select location">
+                        <option value="pakistan">Pakistan</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section id="slider-main" aria-label="Featured Products Slider">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-animation-text">
+                            <p>Starting at $ <b>20.00</b></p>
+                            <h1 class="slider-animation-title">Organic &amp; healthy <br> vegetables</h1>
+                            <div class="slider-animation-btn">
+                                <a href="shop.html" class="slider-animation-btn-link">Shop Now <i class="material-icons"
+                                        aria-hidden="true">keyboard_double_arrow_right</i></a>
+                            </div>
+                        </div>
+                        <img src="./images/slider-1.webp" alt="Fresh organic vegetables">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-animation-text">
+                            <p>Starting at $ <b>29.99</b></p>
+                            <h1 class="slider-animation-title">Explore fresh &amp; <br> juicy fruits</h1>
+                            <div class="slider-animation-btn">
+                                <a href="shop.html" class="slider-animation-btn-link">Shop Now <i class="material-icons"
+                                        aria-hidden="true">keyboard_double_arrow_right</i></a>
+                            </div>
+                        </div>
+                        <img src="./images/slider-2.webp" alt="Fresh juicy fruits">
+                    </div>
+                </div>
+                <div class="swiper-button-next" aria-label="Next slide"></div>
+                <div class="swiper-button-prev" aria-label="Previous slide"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="Deals-product-section" aria-label="Daily Deals">
+            <div class="Deals-product-section-top">
+                <div class="title-box">
+                    <h2 class="gi-title">Day of the <span>deal</span></h2>
+                    <p>Don't wait. The time will never be just right.</p>
+                </div>
+                <div class="Deals-product-section-top-right">
+                    <div class="deal-timer" role="timer" aria-label="Deal countdown timer">
+                        <div class="timer-box">
+                            <span id="days" aria-label="days">00</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="hours" aria-label="hours">00</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="minutes" aria-label="minutes">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Deals-product-section-bottom">
+
+
+            </div>
+        </section>
+
+        <section id="descount-banner">
+            <img src="./images/banner-1.webp" alt="Descount Banner">
+            <div class="descount-banner-text">
+                <h2>Fresh Fruits <br>Healthy Products</h2>
+                <h3>30% off sale <span>Hurry up!!!</span></h3>
+                <a href="shop.html" class="descount-banner-btn">Shop Now <i class="material-icons"
+                        aria-hidden="true">keyboard_double_arrow_right</i></a>
+            </div>
+        </section>
+
+
+        <section id="new-arival">
+            <div class="new-arival-top">
+                <div class="new-arival-top-left">
+                    <h2 class="new-arival-title">New <span>Arrivals</span></h2>
+                    <p>Shop online for new arrivals and get free shipping!</p>
+                </div>
+                <div class="new-arival-top-right">
+                    <ul>
+                        <li>All</li>
+                        <li>Snack &amp; Spices</li>
+                        <li>Fruits</li>
+                        <li>Vegetables</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="new-arival-bottum"></div>
+        </section>
+
+
+        <section id="banners">
+            <div class="banner">
+                <img src="./images/banner-2.webp" alt="Descount Banner">
+                <div class="banner-text">
+                    <h2>Tasty Snack <br> & Fastfood</h2>
+                    <p>The flavor of <br>something special</p>
+                    <a href="shop.html" class="banner-btn">Shop Now <i class="material-icons"
+                            aria-hidden="true">keyboard_double_arrow_right</i></a>
+                </div>
+                <div class="offer">
+                    <h3><span>70%</span> off</h3>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="./images/banner-3.webp" alt="Descount Banner">
+                <div class="banner-text">
+                    <h2>Tasty Snack <br> & Fastfood</h2>
+                    <p>The flavor of <br>something special</p>
+                    <a href="shop.html" class="banner-btn">Shop Now <i class="material-icons"
+                            aria-hidden="true">keyboard_double_arrow_right</i></a>
+                </div>
+                <div class="offer">
+                    <h3><span>50%</span> off</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="spacations">
+        </section>
+        <section id="spacation">
+            <div class="spacs-box">
+                <i class="material-icons" aria-hidden="true">airport_shuttle</i>
+                <h5>Free Shipping</h5>
+                <p>Free shipping on all US order or <br> order above $200</p>
+            </div>
+
+            <div class="spacs-box">
+                <i class="material-icons" aria-hidden="true">support_agent</i>
+                <h5>24X7 Support</h5>
+                <p>Contact us 24 hours a day, <br> 7 days a week</p>
+            </div>
+
+            <div class="spacs-box">
+                <i class="material-icons" aria-hidden="true">calendar_month</i>
+                <h5>30 Days Return</h5>
+                <p>Simply return it within 30 days <br> for an exchange</p>
+            </div>
+            <div class="spacs-box">
+                <i class="material-icons" aria-hidden="true">payments</i>
+                <h5>Payment Secure</h5>
+                <p>Contact us 24 hours a day, <br>7 days a week</p>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="blog-top">
+                <h2 class="new-arival-title">Latest<span>Blog</span></h2>
+                <p>We tackle interesting topics every day in 2025.</p>
+            </div>
+            <div class="blog-bottum"></div>
+        </section>
+
+
+        <footer id="footer">
+            <div class="footer-left">
+                <img src="./images/logo-image.png" alt="">
+                <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
+                <div class="foter-socal">
+                    <img src="./images/android.webp" alt="">
+                    <img src="./images/apple.webp" alt="">
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-box">
+                    <h1>categories</h1>
+                    <ul>
+                        <li>foods</li>
+                        <li>Fruits</li>
+                        <li>Dried Fruits</li>
+                        <li>cockies</li>
+                        <li>Vegetables</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>company</h1>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">teams & policy</a></li>
+                        <li><a href="#">Private-policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Account</h1>
+                    <ul>
+                        <li><a href="register.html">sign in</a></li>
+                        <li><a href="register.html">Regstration</a></li>
+                        <li><a href="cart.html">view cart</a></li>
+                        <li>return-policy</li>
+                        <li>payments</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Contact</h1>
+                    <p> <i class="material-icons" aria-hidden="true">location_on</i> masoom shah colony kalapul karachi
+                    </p>
+                    <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
+                    <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
+
+                    <div class="socal-icons">
+                        <a href="#"><img src="./images/facebook-img.webp" alt=""></a>
+                        <a href="#"><img src="./images/linkedin-img.webp" alt=""></a>
+                        <a href="#"><img src="./images/instagram-img.webp" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+    <script>
+    //     // Initialize Swiper and countdown only if on ecommerce.html
+    //     if (document.querySelector('.mySwiper')) {
+    //         // Configure hero section slider
+    //         const progressCircle = document.querySelector(".autoplay-progress svg");
+    //         const progressContent = document.querySelector(".autoplay-progress span");
+    //         const heroSwiper = new Swiper(".mySwiper", {
+    //             spaceBetween: 30,
+    //             centeredSlides: true,
+    //             autoplay: {
+    //                 delay: 3500,
+    //                 disableOnInteraction: false
+    //             },
+    //             effect: 'fade',
+    //             fadeEffect: {
+    //                 crossFade: true
+    //             },
+    //             pagination: {
+    //                 el: ".swiper-pagination",
+    //                 clickable: true,
+    //                 dynamicBullets: true
+    //             },
+    //             navigation: {
+    //                 nextEl: ".swiper-button-next",
+    //                 prevEl: ".swiper-button-prev"
+    //             },
+    //             loop: true,
+    //             on: {
+    //                 autoplayTimeLeft(s, time, progress) {
+    //                     progressCircle.style.setProperty("--progress", 1 - progress);
+    //                     progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    //                 }
+    //             }
+    //         });
+
+    //         // Set up 24 hour countdown timer
+    //         const initCountdown = () => {
+    //             let targetDate = new Date();
+    //             targetDate.setHours(targetDate.getHours() + 24);
+
+    //             return setInterval(() => {
+    //                 const currentDate = new Date();
+    //                 const difference = targetDate - currentDate;
+
+    //                 // Calculate time units
+    //                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    //                 const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    //                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    //                 // Update DOM elements
+    //                 const updateElement = (id, value) => {
+    //                     const element = document.getElementById(id);
+    //                     if (element) {
+    //                         element.textContent = value.toString().padStart(2, '0');
+    //                     }
+    //                 };
+
+    //                 updateElement('days', days);
+    //                 updateElement('hours', hours);
+    //                 updateElement('minutes', minutes);
+    //                 updateElement('seconds', seconds);
+
+    //                 // Reset countdown when it reaches zero
+    //                 if (difference < 0) {
+    //                     targetDate = new Date();
+    //                     targetDate.setHours(targetDate.getHours() + 24);
+    //                 }
+    //             }, 1000);
+    //         };
+
+    //         initCountdown();
+    //     }
+
+    //     // Only run deals section code if element exists
+    //     const DealsProductSectionBottom = document.querySelector('.Deals-product-section-bottom');
+    //     if (DealsProductSectionBottom) {
+    //         const DealsProduct = JSON.parse(localStorage.getItem('products')) || [];
+    //         let clutter = '';
+
+    //         // Only show first 6 products
+    //         const productsToShow = DealsProduct.slice(0, 6);
+
+    //         productsToShow.forEach((product, index) => {
+    //             clutter += `<div class="card-box">
+    //         <div class="card-image-box">
+    //             <img src="${product.image}" alt="${product.name}">
+    //         </div>
+    //         <p>${product.category}</p>
+    //         <h2>${product.name}</h2>
+    //         <div class="card-rating-box">
+    //             <div class="rating">
+    //                 <span>(${product.rating})<i class="material-icons" aria-hidden="true">star</i></span>
+    //             </div>
+    //             <div class="waight">
+    //                 <span>${product.waight}</span>
+    //             </div>
+    //         </div>
+    //         <div class="card-price-box">
+    //             <span id="new-price">$${product.newPrice.toFixed(2)}</span>
+    //             <span id="old-price">$${product.oldPrice.toFixed(2)}</span>
+    //         </div>
+    //         <div class="card-icon-box">
+    //             <i class="material-icons" data-index="${index}" id="cart-icon" aria-hidden="true">shopping_cart</i>
+    //             <i class="material-icons" data-index="${index}" id="details-icon" aria-hidden="true">info</i>
+    //             <div class="stock">
+    //                 <span>${product.availability}</span>
+    //             </div>
+    //             <div class="varity">${product.varity}</div>
+    //         </div>
+    //     </div>`;
+    //         });
+
+    //         DealsProductSectionBottom.innerHTML = clutter;
+    //     }
+
+    //     // Only run deals section code if element exists
+    //     const newArivalBottum = document.querySelector('.new-arival-bottum');
+    //     if (newArivalBottum) {
+    //         const DealsProduct = JSON.parse(localStorage.getItem('products')) || [];
+    //         let newArivalClutter = '';
+
+    //         // Only show first 10 products
+    //         const productsToShow = DealsProduct.slice(6, 16);
+
+    //         productsToShow.forEach((product, index) => {
+    //             newArivalClutter += `<div class="card-box">
+    //         <div class="card-image-box">
+    //             <img src="${product.image}" alt="${product.name}">
+    //         </div>
+    //         <p>${product.category}</p>
+    //         <h2>${product.name}</h2>
+    //         <div class="card-rating-box">
+    //             <div class="rating">
+    //                 <span>(${product.rating})<i class="material-icons" aria-hidden="true">star</i></span>
+    //             </div>
+    //             <div class="waight">
+    //                 <span>${product.waight}</span>
+    //             </div>
+    //         </div>
+    //         <div class="card-price-box">
+    //             <span id="new-price">$${product.newPrice.toFixed(2)}</span>
+    //             <span id="old-price">$${product.oldPrice.toFixed(2)}</span>
+    //         </div>
+    //         <div class="card-icon-box">
+    //             <i class="material-icons" data-index="${product.id}" id="cart-icon" aria-hidden="true">shopping_cart</i>
+    //             <i class="material-icons" data-index="${product.id}" id="details-icon" aria-hidden="true">info</i>
+    //             <div class="stock">
+    //                 <span>${product.availability}</span>
+    //             </div>
+    //             <div class="varity">${product.varity}</div>
+    //         </div>
+    //     </div>`;
+    //         });
+
+    //         newArivalBottum.innerHTML = newArivalClutter;
+    //         // Only show blog  products
+
+    //         const blogProducts = [
+    //             {
+    //                 id: 3.1,
+    //                 name: 'Marketing Guide: 5 Steps to Success to way.',
+    //                 image: './images/blog-1.webp',
+    //                 date: "June 30, 2024",
+    //                 category: "Organic",
+    //             },
+    //             {
+    //                 id: 3.2,
+    //                 name: 'Best way to solve business deal issue in market.',
+    //                 image: './images/blog-2.webp',
+    //                 date: "April 02, 2024",
+    //                 category: "Fruits",
+    //             },
+    //             {
+    //                 id: 3.3,
+    //                 name: 'Marketing Guide: 5 Steps to Success to way.',
+    //                 image: './images/blog-3.webp',
+    //                 date: "Mar 09, 2024",
+    //                 category: "Vegetables",
+    //             },
+    //             {
+    //                 id: 3.4,
+    //                 name: 'Business ideas to grow your business traffic.',
+    //                 image: './images/blog-4.webp',
+    //                 date: "January 25, 2024",
+    //                 category: "Fastfood",
+    //             },
+    //             {
+    //                 id: 3.5,
+    //                 name: 'Marketing Guide: 5 Steps way to Success.',
+    //                 image: './images/blog-5.webp',
+    //                 date: "December 10, 2024",
+    //                 category: "Fruits",
+    //             }
+    //         ];
+    //         // Store blog products in localStorage
+    //         localStorage.setItem('blogProducts', JSON.stringify(blogProducts));
+
+
+    //         const blogPro = JSON.parse(localStorage.getItem('blogProducts')) || [];
+    //         // Initialize blog clutter variable
+    //         let blogBottum = document.querySelector('.blog-bottum');
+    //         let blogClutter = '';
+
+
+    //         blogPro.forEach((product, index) => {
+    //             blogClutter += `  <div class="blog-box">
+    //         <div class="image-box">
+    //             <img src="${product.image}" alt="${product.name}">
+    //         </div>
+    //         <h5>${product.date} - <strong>${product.category}</strong></h5>
+    //         <h2>${product.name}</h2>
+    //         <button data-index="${index}">Read More</button>
+    //     </div>`;
+    //         });
+
+    //         blogBottum.innerHTML = blogClutter;
+    //         // Add event listener to cart icons
+    //         document.querySelectorAll('#cart-icon').forEach(icon => {
+    //             icon.addEventListener('click', (e) => {
+    //                 // Get clicked product index
+    //                 const index = e.target.dataset.index;
+                    
+    //                 // Get current user info
+    //                 const currentUser = localStorage.getItem('userId') || 'guest';
+                    
+    //                 // Get products and find selected one
+    //                 const products = JSON.parse(localStorage.getItem('products')) || [];
+    //                 const selectedProduct = products[index];
+
+    //                 // Get existing cart
+    //                 const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+    //                 // Generate order ID and timestamp
+    //                 const orderId = Math.floor(100000 + Math.random() * 900000);
+    //                 const orderTime = new Date().toISOString();
+
+    //                 // Create cart item with order details
+    //                 const cartItem = {
+    //                     ...selectedProduct,
+    //                     quantity: 1,
+    //                     orderId: orderId,
+    //                     orderTime: orderTime,
+    //                     userId: currentUser
+    //                 };
+
+    //                 // Add to cart
+    //                 cart.push(cartItem);
+                    
+    //                 // Save cart to localStorage
+    //                 localStorage.setItem('cart', JSON.stringify(cart));
+
+    //                 // Update cart count in header
+    //                 const cartCount = document.querySelector('.cart span');
+    //                 if (cartCount) {
+    //                     cartCount.textContent = `${cart.length} Items`;
+    //                 }
+
+    //                 // Show success message
+    //                 Swal.fire({
+    //                     title: 'Added to Cart!',
+    //                     text: `Order ID: ${orderId}`,
+    //                     icon: 'success',
+    //                     confirmButtonText: 'OK'
+    //                 });
+    //             });
+    //         });
+
+    //         // Update stock color based on availability
+    //         function updateStockAndVarietyStyles() {
+    //             document.querySelectorAll('.stock span').forEach(stockSpan => {
+    //                 stockSpan.style.color = stockSpan.textContent.trim() === 'In stock' ? '#5CAF90' : '#FF0000';
+    //             });
+
+    //             document.querySelectorAll(".varity").forEach(varity => {
+    //                 const text = varity.textContent.trim().toLowerCase();
+    //                 if (text === "sale") {
+    //                     varity.style.backgroundColor = '#FF0000';
+    //                 } else if (text === "new") {
+    //                     varity.style.backgroundColor = '#5CAF90';
+    //                 } else {
+    //                     varity.style.display = "none";
+    //                 }
+    //             });
+    //         }
+    //         updateStockAndVarietyStyles();
+    //     }
+
+    // // Add logout functionality
+    // function handleLogout() {
+    //     // Clear user data from storage
+    //     localStorage.removeItem('currentUser');
+    //     sessionStorage.removeItem('currentUser');
+        
+    //     // Clear cart
+    //     localStorage.removeItem('cart');
+    //     window.parent.cart = [];
+
+    //     // Reset cart count in header
+    //     const cartCount = document.querySelector('.cart span');
+    //     if (cartCount) {
+    //         cartCount.textContent = '0 Items';
+    //     }
+
+    //     // Show logout success message
+    //     Swal.fire({
+    //         title: 'Logged Out',
+    //         text: 'You have been successfully logged out',
+    //         icon: 'success',
+    //         confirmButtonText: 'OK'
+    //     }).then(() => {
+    //         // Redirect to home page
+    //         window.location.href = 'index.html';
+    //     });
+    // }
+
+    </script>
+
+</body>
+
+</html>

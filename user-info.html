@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Media query for no-mobile devices -->
-     <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
-     <!-- Media query for mobile devices -->
-     <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
-    
-     <!-- Media query for tablets -->
-     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css"> 
-     
-     <!-- Media query for large screens -->
-     <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
+    <!-- Media query for no-mobile devices -->
+    <link rel="stylesheet" media="screen and (max-width: 460px)" href="Media Quari/no-mobile.css">
+    <!-- Media query for mobile devices -->
+    <link rel="stylesheet" media="screen and (min-width: 461px) and (max-width: 768px)" href="Media Quari/mobile.css">
+
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="Media Quari/tablet.css">
+
+    <!-- Media query for large screens -->
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="Media Quari/desktop.css">
 </head>
 
 <body>
@@ -86,24 +86,17 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Product ID</th>
+                                    <th>Order ID</th>
                                     <th>Added Date</th>
                                     <th>Customer</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
-                                    <th>Payment Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#583488/80</td>
-                                    <td>Apr 23, 2024</td>
-                                    <td class="customer">Gail C. Anderson</td>
-                                    <td>Normal</td>
-                                    <td>$1,230.00</td>
-                                    <td><span class="status unpaid">Unpaid</span></td>
-                                </tr>   
-                                
+                            <tbody id="user-oorder-table-body">
+
+
                                 <!-- Add more rows as needed -->
                             </tbody>
                         </table>
@@ -113,6 +106,7 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

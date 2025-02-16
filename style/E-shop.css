@@ -1,0 +1,154 @@
+.shop-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.category-filter {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.sub-categories {
+    padding-left: 1rem;
+}
+
+.sub-category {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    color: #666;
+}
+
+.shop-content {
+    flex: 1;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.view-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-options button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.view-options button.active {
+    color: #4CAF50;
+}
+
+.active-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-tag {
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove-filter {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.clear-all {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sale-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #ff4444;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.category {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: #ffc107;
+    margin: 0.5rem 0;
+}
+
+.price {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 0.9rem;
+} 

@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop-page</title>
+      <!-- CSS stylesheets -->
+      <link rel="stylesheet" href="./style/E-Header.css">
+      <link rel="stylesheet" href="./style/E-style.css">
+      <link rel="stylesheet" href="./style/about.css">
+      <!-- Google Material Icons -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+</head>
+<body>
+    <main>
+ <!-- Header section containing logo, search and user options -->
+ <header>
+    <!-- Logo container -->
+    <div class="logo">
+        <img src="/images/logo-image.png" alt="Organic Food Store Logo">
+    </div>
+    <!-- Search bar container -->
+    <div class="search">
+        <input type="text" placeholder="Search Product..." aria-label="Search products">
+        <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+    </div>
+    <!-- User options container (login and cart) -->
+    <div class="third">
+        <!-- Login/Account section -->
+        <div class="login">
+            <i class="material-icons" aria-hidden="true">person</i>
+            <a href="userinfo.html" aria-label="Account and Login">Account
+                <br>
+                <span>ADD info</span>
+            </a>
+        </div>
+        <!-- Shopping cart section -->
+        <div class="cart">
+            <i class="material-icons" aria-hidden="true">shopping_cart</i>
+            <a href="productscart.html" aria-label="Shopping Cart">Cart
+                <br>
+                <span>0 Items</span>
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<section id="menu-section2">
+    <div class="menu-section-left">
+        <div class="categories">
+            <i class="material-icons" aria-hidden="true">menu</i>
+            <span>All Categories</span>
+            <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+        </div>
+    </div>
+
+    <nav class="menu-section-center">
+        <div class="menu-section-center-box">
+            <ul>
+                <li><a href="ecommerce.html" aria-current="page">Home</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li id="active"><a href="about.html">about</a></li>
+                <li><a href="contact.html" >contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="menu-section-right">
+        <div class="location">
+            <i class="material-icons" aria-hidden="true">location_on</i>
+            <select name="location" id="location" aria-label="Select location">
+                <option value="pakistan">Pakistan</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- about section page  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Organic Food Store</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./style/Header.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <!-- ... existing header and menu section code ... -->
+
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="about-header">
+                <h1>Who We <span>Are?</span></h1>
+                <h2>WE'RE HERE TO SERVE ONLY THE BEST PRODUCTS FOR YOU. ENRICHING YOUR HOMES WITH THE BEST ESSENTIALS.</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://maraviyainfotech.com/wrapbootstrap/grabit-html/grabit-html/assets/img/common/about.png" alt="Our modern and welcoming store interior">
+                </div>
+                <div class="about-image">
+                    <img src="https://maraviyainfotech.com/wrapbootstrap/grabit-html/grabit-html/assets/img/common/about-2.png" alt="Local farmer harvesting fresh organic produce">
+                </div>
+                <div class="about-image">
+                    <img src="https://maraviyainfotech.com/wrapbootstrap/grabit-html/grabit-html/assets/img/common/about-3.png" alt="Our sustainable greenhouse facilities">
+                </div>
+            </div>
+
+            <div class="about-content">
+                <p>At our organic food store, we're passionate about bringing you the highest quality natural and organic products. We work directly with local farmers and sustainable producers to ensure every item meets our strict quality standards.</p>
+                <p>Our commitment to sustainability goes beyond just selling organic products. We actively support local farming communities and implement eco-friendly practices throughout our operations.</p>
+                <p>With over 20 years of experience in the organic food industry, we've built strong relationships with trusted suppliers and a loyal customer base who share our values of health, sustainability, and community support.</p>
+            </div>
+
+            <!-- Services Section -->
+            <div class="services-section">
+                <h2>Our <span>Services</span></h2>
+                <p class="services-subtitle">Customer service should not be a department. It should be the entire company.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping on all US order or order above $200</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="material-icons">support_agent</i>
+                        </div>
+                        <h3>24X7 Support</h3>
+                        <p>Contact us 24 hours a day, 7 days a week</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="material-icons">replay_30</i>
+                        </div>
+                        <h3>30 Days Return</h3>
+                        <p>Simply return it within 30 days for an exchange</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="material-icons">payments</i>
+                        </div>
+                        <h3>Payment Secure</h3>
+                        <p>Contact us 24 hours a day, 7 days a week</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... existing footer code ... -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="footer">
+    <div class="footer-left">
+        <img src="/images/logo-image.png" alt="">
+        <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
+        <div class="foter-socal">
+            <img src="/images/android.webp" alt="">
+            <img src="/images/apple.webp" alt="">
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <div class="footer-box">
+            <h1>categories</h1>
+            <ul>
+                <li>foods</li>
+                <li>Fruits</li>
+                <li>Dried Fruits</li>
+                <li>cockies</li>
+                <li>Vegetables</li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>company</h1>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">teams & policy</a></li>
+                <li><a href="privacy.html">Private-policy</a></li>
+
+
+
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>Account</h1>
+            <ul>
+                <li><a href="login.html">sign in</a></li>
+                <li><a href="registration.html">Regstration</a></li>
+                <li><a href="card.html">view cart</a></li>
+                <li>return-policy</li>
+                <li>payments</li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>Contact</h1>
+                <p> <i class="material-icons" aria-hidden="true">location_on</i>  masoom shah colony kalapul karachi</p>
+                <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
+                <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
+
+                <div class="socal-icons">
+                   <a href="#"><img src="/images/facebook-img.webp" alt=""></a>
+                   <a href="#"><img src="/images/linkedin-img.webp" alt=""></a>
+                   <a href="#"><img src="/images/instagram-img.webp" alt=""></a>
+                </div>
+        </div>
+    </div>
+</footer>
+
+
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
