@@ -1,227 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-      <!-- CSS stylesheets -->
-      <link rel="stylesheet" href="/style/E-Header.css">
-      <link rel="stylesheet" href="/style/E-style.css">
-      <link rel="stylesheet" href="/style/userinfo.css">
-      <!-- Google Material Icons -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- Font Awesome Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/style/E-Header.css">
+    <link rel="stylesheet" href="/style/E-style.css">
+    <link rel="stylesheet" href="/style/userinfo.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
+
 <body>
     <main>
- <!-- Header section containing logo, search and user options -->
- <header>
-    <!-- Logo container -->
-    <div class="logo">
-        <img src="/images/logo-image.png" alt="Organic Food Store Logo">
-    </div>
-    <!-- Search bar container -->
-    <div class="search">
-        <input type="text" placeholder="Search Product..." aria-label="Search products">
-        <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
-    </div>
-    <!-- User options container (login and cart) -->
-    <div class="third">
-        <!-- Login/Account section -->
-        <div class="login">
-            <i class="material-icons" aria-hidden="true">person</i>
-            <a href="userinfo.html" aria-label="Account and Login">Account
-                <br>
-                <span>ADD info</span>
-            </a>
-        </div>
-        <!-- Shopping cart section -->
-        <div class="cart">
-            <i class="material-icons" aria-hidden="true">shopping_cart</i>
-            <a href="productscart.html" aria-label="Shopping Cart">Cart
-                <br>
-                <span>0 Items</span>
-            </a>
-        </div>
-    </div>
-</header>
-
-<section id="menu-section2">
-    <div class="menu-section-left">
-        <div class="categories">
-            <i class="material-icons" aria-hidden="true">menu</i>
-            <span>All Categories</span>
-            <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
-        </div>
-    </div>
-
-    <nav class="menu-section-center">
-        <div class="menu-section-center-box">
-            <ul>
-                <li><a href="ecommerce.html" aria-current="page">Home</a></li>
-                <li><a href="shop.html">shop</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html" >contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="menu-section-right">
-        <div class="location">
-            <i class="material-icons" aria-hidden="true">location_on</i>
-            <select name="location" id="location" aria-label="Select location">
-                <option value="pakistan">Pakistan</option>
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-            </select>
-        </div>
-    </div>
-</section>
-
-
-
-
-<section id="Register-section">
-    <div class="section-box">
-        <div id="Register-section-top">
-            <h1>User Information</h1>
-            <p>Best place to buy products.</p>
-        </div>
-        <form id="Register-form">
-            <div class="Register-form-top">
-                <div class="Register-form-top-left">
-                    <label for="FirstName">First Name</label>
-                    <input type="text" id="FirstName" placeholder="Enter your First Name">
-                    <label for="Email">Email</label>
-                    <input type="Email" id="Email" placeholder="Email@gmail.com">
-                    <label for="password">password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
-                    <label for="country">country</label>
-                    <select id="country">
-                        <option value="pakistan">pakistan</option>
-                        <option value="India">India</option>
-                        <option value="usa">usa</option>
-                        <option value="uk">uk</option>
-                    </select>
+        <!-- Header section containing logo, search and user options -->
+        <header>
+            <!-- Logo container -->
+            <div class="logo">
+                <img src="/images/logo-image.png" alt="Organic Food Store Logo">
+            </div>
+            <!-- Search bar container -->
+            <div class="search">
+                <input type="text" placeholder="Search Product..." aria-label="Search products">
+                <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+            </div>
+            <!-- User options container (login and cart) -->
+            <div class="third">
+                <!-- Login/Account section -->
+                <div class="login">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                    <a href="userinfo.html" aria-label="Account and Login">Account
+                        <br>
+                        <span>ADD info</span>
+                    </a>
                 </div>
-                <div class="Register-form-top-right">
-                    <label for="lastName">last Name</label>
-                    <input type="text" id="lastName" placeholder="Enter your last Name">
-                    <label for="phoneNumber">phone Number</label>
-                    <input type="text" id="phoneNumber" placeholder="Enter your Phone Number">
-                    <label for="conformpassword">conform password</label>
-                    <input type="password" id="conformpassword" placeholder="Enter your Conform password">
-                    <label for="state">state</label>
-                    <select id="state">
-                        <option value="pakistan">pakistan</option>
-                        <option value="India">India</option>
-                        <option value="usa">usa</option>
-                        <option value="uk">uk</option>
+                <!-- Shopping cart section -->
+                <div class="cart">
+                    <i class="material-icons" aria-hidden="true">shopping_cart</i>
+                    <a href="productscart.html" aria-label="Shopping Cart">Cart
+                        <br>
+                        <span>0 Items</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="menu-section2">
+            <div class="menu-section-left">
+                <div class="categories">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                    <span>All Categories</span>
+                    <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+                </div>
+            </div>
+
+            <nav class="menu-section-center">
+                <div class="menu-section-center-box">
+                    <ul>
+                        <li><a href="ecommerce.html" aria-current="page">Home</a></li>
+                        <li><a href="shop.html">shop</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="menu-section-right">
+                <div class="location">
+                    <i class="material-icons" aria-hidden="true">location_on</i>
+                    <select name="location" id="location" aria-label="Select location">
+                        <option value="pakistan">Pakistan</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
                     </select>
                 </div>
             </div>
-            <div class="Register-form-botum">
-                <div class="Rfb-top">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" placeholder="Enter your Address">
+        </section>
+
+
+
+
+        <section id="Register-section">
+            <div class="section-box">
+                <div id="Register-section-top">
+                    <h1>User Information</h1>
+                    <p>Best place to buy products.</p>
                 </div>
-                <div class="Rfb-bottum">
-                    <div class="Rfbb-left">
-                        <label for="City">City</label>
-                        <select id="City">
-                            <option value="sindh">sindh</option>
-                            <option value="gopal">gopal</option>
-                            <option value="panjab">panjab</option>
-                            <option value="bahair">bahair</option>
-                            <option value="Andalusia">Andalusia</option>
-                            <option value="kpk">kpk</option>
-                            <option value="bloachistan">bloachistan</option>
-                            <option value="bloachistan">bloachistan</option>
-                        </select>
+                <form id="Register-form">
+                    <div class="Register-form-top">
+                        <div class="Register-form-top-left">
+                            <label for="FirstName">First Name</label>
+                            <input type="text" id="FirstName" placeholder="Enter your First Name">
+                            <label for="Email">Email</label>
+                            <input type="Email" id="Email" placeholder="Email@gmail.com">
+                            <label for="password">password</label>
+                            <input type="password" id="password" placeholder="Enter your password">
+                            <label for="country">country</label>
+                            <select id="country">
+                                <option value="pakistan">pakistan</option>
+                                <option value="India">India</option>
+                                <option value="usa">usa</option>
+                                <option value="uk">uk</option>
+                            </select>
+                        </div>
+                        <div class="Register-form-top-right">
+                            <label for="lastName">last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter your last Name">
+                            <label for="phoneNumber">phone Number</label>
+                            <input type="text" id="phoneNumber" placeholder="Enter your Phone Number">
+                            <label for="conformpassword">conform password</label>
+                            <input type="password" id="conformpassword" placeholder="Enter your Conform password">
+                            <label for="state">state</label>
+                            <select id="state">
+                                <option value="pakistan">pakistan</option>
+                                <option value="India">India</option>
+                                <option value="usa">usa</option>
+                                <option value="uk">uk</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="Rfbb-right">
-                        <label for="zipCode">zipCode</label>
-                        <input type="text" id="zipCode" placeholder="Enter your zipCode">
+                    <div class="Register-form-botum">
+                        <div class="Rfb-top">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Enter your Address">
+                        </div>
+                        <div class="Rfb-bottum">
+                            <div class="Rfbb-left">
+                                <label for="City">City</label>
+                                <select id="City">
+                                    <option value="sindh">sindh</option>
+                                    <option value="gopal">gopal</option>
+                                    <option value="panjab">panjab</option>
+                                    <option value="bahair">bahair</option>
+                                    <option value="Andalusia">Andalusia</option>
+                                    <option value="kpk">kpk</option>
+                                    <option value="bloachistan">bloachistan</option>
+                                    <option value="bloachistan">bloachistan</option>
+                                </select>
+                            </div>
+                            <div class="Rfbb-right">
+                                <label for="zipCode">zipCode</label>
+                                <input type="text" id="zipCode" placeholder="Enter your zipCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <button type="submit">Submit Details</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="footer-left">
+                <img src="/images/logo-image.png" alt="">
+                <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
+                <div class="foter-socal">
+                    <img src="/images/android.webp" alt="">
+                    <img src="/images/apple.webp" alt="">
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-box">
+                    <h1>categories</h1>
+                    <ul>
+                        <li>foods</li>
+                        <li>Fruits</li>
+                        <li>Dried Fruits</li>
+                        <li>cockies</li>
+                        <li>Vegetables</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>company</h1>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">teams & policy</a></li>
+                        <li><a href="#">Private-policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Account</h1>
+                    <ul>
+                        <li><a href="#">sign in</a></li>
+                        <li><a href="#">Regstration</a></li>
+                        <li><a href="#">view cart</a></li>
+                        <li>return-policy</li>
+                        <li>payments</li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1>Contact</h1>
+                    <p> <i class="material-icons" aria-hidden="true">location_on</i> masoom shah colony kalapul karachi
+                    </p>
+                    <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
+                    <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
+
+                    <div class="socal-icons">
+                        <a href="#"><img src="/images/facebook-img.webp" alt=""></a>
+                        <a href="#"><img src="/images/linkedin-img.webp" alt=""></a>
+                        <a href="#"><img src="/images/instagram-img.webp" alt=""></a>
                     </div>
                 </div>
             </div>
-            <div class="button-box">
-                <button type="submit">Submit Details</button>
-            </div>
-        </form>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-<footer id="footer">
-    <div class="footer-left">
-        <img src="/images/logo-image.png" alt="">
-        <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
-        <div class="foter-socal">
-            <img src="/images/android.webp" alt="">
-            <img src="/images/apple.webp" alt="">
-        </div>
-    </div>
-
-    <div class="footer-right">
-        <div class="footer-box">
-            <h1>categories</h1>
-            <ul>
-                <li>foods</li>
-                <li>Fruits</li>
-                <li>Dried Fruits</li>
-                <li>cockies</li>
-                <li>Vegetables</li>
-            </ul>
-        </div>
-        <div class="footer-box">
-            <h1>company</h1>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">teams & policy</a></li>
-                <li><a href="#">Private-policy</a></li>
-            </ul>
-        </div>
-        <div class="footer-box">
-            <h1>Account</h1>
-            <ul>
-                <li><a href="#">sign in</a></li>
-                <li><a href="#">Regstration</a></li>
-                <li><a href="#">view cart</a></li>
-                <li>return-policy</li>
-                <li>payments</li>
-            </ul>
-        </div>
-        <div class="footer-box">
-            <h1>Contact</h1>
-                <p> <i class="material-icons" aria-hidden="true">location_on</i>  masoom shah colony kalapul karachi</p>
-                <p> <i class="material-icons" aria-hidden="true">call</i> +9233333333333 </p>
-                <!-- <p> <i class="material-icons" aria-hidden="true">stacked_email</i> hbahi024@gmail.com</p> -->
-
-                <div class="socal-icons">
-                   <a href="#"><img src="/images/facebook-img.webp" alt=""></a>
-                   <a href="#"><img src="/images/linkedin-img.webp" alt=""></a>
-                   <a href="#"><img src="/images/instagram-img.webp" alt=""></a>
-                </div>
-        </div>
-    </div>
-</footer>
+        </footer>
 
 
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+      
+    </script>
+
 </body>
+
 </html>
